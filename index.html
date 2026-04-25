@@ -1,0 +1,1673 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bibliografia do Latim Medieval e da Literatura Latina Medieval</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
+:root {
+  --ink: #1a1208;
+  --parchment: #f5edd6;
+  --parchment-dark: #e4d5ae;
+  --parchment-mid: #ede0c0;
+  /* Crimson palette — deeper and richer than before */
+  --rub: #b52e23;
+  --rub-light: #c9392c;
+  --rub-dark: #8a2218;
+  --rub-vivid: #d44030;
+  /* Gold — mais claro e luminoso no cabeçalho */
+  --gold: #9a7c2e;
+  --gold-lt: #dfc06a;
+  --gold-pale: #f0dfa0;
+  --gold-hdr: #f2d878;   /* ouro claro exclusivo do cabeçalho */
+  /* Blue (for links in sidebar/entries) */
+  --blue: #1f3a5f;
+  --blue-lt: #2d5382;
+  /* Neutral warm tones */
+  --marg: #6b5a3e;
+  --faded: #8c7a5e;
+  --bg-entry: rgba(255,255,255,0.38);
+  --bg-hover: rgba(255,255,255,0.65);
+  /* Header specific */
+  --hdr-bg1: #7a1e16;
+  --hdr-bg2: #4e1410;
+  --hdr-border: #8a2020;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+
+body{
+  background:var(--parchment);
+  color:var(--ink);
+  font-family:'EB Garamond',Georgia,serif;
+  font-size:16px;
+  line-height:1.78;
+}
+
+/* TOP BAR — triple-stripe in crimson and gold */
+.bar{
+  height:8px;
+  background:linear-gradient(90deg,
+    var(--rub-dark) 0%, var(--rub-dark) 33%,
+    var(--gold-hdr) 33%, var(--gold-hdr) 66%,
+    var(--rub-dark) 66%, var(--rub-dark) 100%);
+}
+
+/* HEADER */
+header{
+  background:linear-gradient(175deg, var(--hdr-bg1) 0%, var(--hdr-bg2) 60%, #6e1a12 100%);
+  color:var(--parchment);
+  padding:3rem 2rem 2.6rem;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+  border-bottom:3px solid var(--rub-light);
+}
+
+/* Subtle vignette only — no grid pattern */
+header::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 50% 0%, rgba(242,216,120,.07) 0%, transparent 70%);
+  pointer-events:none;
+}
+
+/* Top decorative rule inside header */
+header::after{
+  content:'';
+  position:absolute;top:0;left:0;right:0;
+  height:2px;
+  background:linear-gradient(90deg,transparent,var(--gold-hdr),var(--gold-pale),var(--gold-hdr),transparent);
+}
+
+/* Distich — main Latin inscription */
+header .distich{
+  font-family:'Cinzel',serif;
+  font-size:clamp(.85rem,1.6vw,1.08rem);
+  font-weight:400;
+  color:var(--gold-hdr);
+  letter-spacing:.1em;
+  line-height:1.7;
+  margin-bottom:1.1rem;
+  position:relative;
+  text-shadow:0 1px 8px rgba(0,0,0,.35);
+}
+header .distich .verse{display:block}
+header .distich .verse + .verse{
+  color:var(--gold-pale);
+  font-size:clamp(.82rem,1.5vw,1rem);
+  letter-spacing:.12em;
+  margin-top:.15rem;
+}
+
+/* Ornamental separator */
+.hline{
+  width:220px;height:1px;
+  background:linear-gradient(90deg,transparent,var(--gold-hdr),var(--gold-pale),var(--gold-hdr),transparent);
+  margin:1rem auto .9rem;
+  position:relative;
+}
+.hline::before,.hline::after{
+  content:'✦';
+  position:absolute;top:50%;transform:translateY(-50%);
+  color:var(--gold-hdr);font-size:.6rem;
+}
+.hline::before{left:-1rem}
+.hline::after{right:-1rem}
+
+/* Main title */
+header h1{
+  font-family:'Cinzel',serif;
+  font-size:clamp(1.45rem,3vw,2.4rem);
+  font-weight:700;
+  color:#f8edd8;
+  letter-spacing:.05em;
+  line-height:1.35;
+  position:relative;
+  text-shadow:0 2px 10px rgba(0,0,0,.35);
+  margin-bottom:.25rem;
+}
+header h1 span{
+  color:var(--gold-hdr);
+  text-shadow:0 0 22px rgba(242,216,120,.4);
+}
+
+/* Dividing rule between title and meta */
+.hline2{
+  width:80px;height:1px;
+  background:linear-gradient(90deg,transparent,var(--gold-hdr),transparent);
+  margin:.8rem auto;
+  position:relative;
+}
+
+/* Meta lines */
+header .hmeta-top{
+  font-family:'EB Garamond',serif;
+  font-size:clamp(.82rem,1.2vw,.97rem);
+  font-style:italic;
+  color:var(--gold-pale);
+  letter-spacing:.05em;
+  position:relative;
+  margin-bottom:.25rem;
+}
+header .hmeta-bottom{
+  font-family:'EB Garamond',serif;
+  font-size:clamp(.72rem,1vw,.82rem);
+  font-style:italic;
+  color:#d4b87a;
+  letter-spacing:.04em;
+  position:relative;
+}
+
+/* LAYOUT */
+.wrapper{display:flex;max-width:1380px;margin:0 auto}
+
+/* SIDEBAR */
+nav#toc{
+  width:300px;min-width:300px;
+  background:var(--parchment-mid);
+  border-right:2px solid var(--parchment-dark);
+  position:sticky;top:0;height:100vh;
+  overflow-y:auto;padding:1.4rem .9rem 2rem;
+  scrollbar-width:thin;scrollbar-color:var(--rub-light) var(--parchment-dark);
+}
+nav#toc::-webkit-scrollbar{width:5px}
+nav#toc::-webkit-scrollbar-thumb{background:var(--rub-light);border-radius:3px}
+nav#toc h2{
+  font-family:'Cinzel',serif;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--rub);margin-bottom:.9rem;padding-bottom:.4rem;
+  border-bottom:1px solid var(--rub-light);
+}
+nav#toc ul{list-style:none}
+nav#toc li{margin-bottom:.12rem}
+nav#toc a{display:block;color:var(--blue);text-decoration:none;font-size:.8rem;padding:.16rem .28rem;border-radius:2px;line-height:1.4;transition:background .12s,color .12s}
+nav#toc a:hover{background:var(--parchment-dark);color:var(--rub)}
+.toc-h>a{font-family:'EB Garamond',serif;font-size:.85rem;font-weight:600;color:var(--rub)!important}
+.toc-sub{padding-left:.75rem}
+.toc-sub a{color:var(--blue-lt)!important;font-style:italic}
+.toc-sub2{padding-left:1.4rem}
+.toc-sub2 a{color:var(--faded)!important;font-size:.76rem}
+.rnum{color:var(--rub-vivid);font-family:'Cinzel',serif;font-size:.72rem;margin-right:.25em}
+
+/* MAIN */
+main{flex:1;padding:2.5rem 2.8rem 5rem;max-width:980px}
+
+/* SECTION */
+.sec{margin-bottom:2.8rem;scroll-margin-top:.8rem}
+.sec-hdr{
+  display:flex;align-items:baseline;gap:.65rem;
+  margin-bottom:1.1rem;padding-bottom:.5rem;
+  border-bottom:2px solid var(--rub);
+  background:linear-gradient(90deg,rgba(122,21,21,.06) 0%,transparent 60%);
+  padding-left:.4rem;
+}
+.sec-n{font-family:'Cinzel',serif;font-size:1.05rem;color:var(--rub);font-weight:600;min-width:2rem}
+.sec-t{font-family:'Cinzel',serif;font-size:1.12rem;font-weight:600;color:var(--ink);letter-spacing:.02em}
+
+/* SUBSECTION */
+.sub{margin:1.4rem 0 .8rem;scroll-margin-top:.8rem}
+.sub-t{
+  font-family:'Cinzel',serif;font-size:.93rem;font-weight:600;
+  color:var(--rub-dark);margin-bottom:.7rem;padding-left:.45rem;
+  border-left:3px solid var(--rub-light);
+}
+.sub2{margin:.9rem 0 .4rem;scroll-margin-top:.8rem}
+.sub2-t{
+  font-family:'EB Garamond',serif;font-size:.96rem;font-weight:600;font-style:italic;
+  color:var(--rub);margin-bottom:.5rem;padding-left:.85rem;
+  border-left:2px solid var(--parchment-dark);
+}
+
+/* ENTRY */
+.e{
+  margin:.55rem 0;
+  padding:.55rem .8rem .55rem .9rem;
+  border-left:2px solid var(--parchment-dark);
+  background:var(--bg-entry);
+  transition:border-color .12s,background .12s;
+  position:relative;
+}
+.e:hover{border-left-color:var(--rub-light);background:var(--bg-hover)}
+.e strong{font-weight:600}
+.e em,em{font-style:italic}
+.e a{color:var(--blue);text-decoration:underline;text-underline-offset:2px;text-decoration-color:var(--rub-light)}
+.e a:hover{color:var(--rub)}
+.url{display:inline;font-family:'Cormorant Garamond',serif;font-size:.77rem;color:var(--faded);word-break:break-all}
+.note{font-size:.88rem;color:var(--marg);font-style:italic;margin-top:.18rem}
+.badge{display:inline-block;font-size:.63rem;font-family:'Cinzel',serif;letter-spacing:.07em;padding:.08em .4em;border-radius:2px;margin-left:.35em;vertical-align:middle}
+.oa{background:#d4edda;color:#155724;border:1px solid #c3e6cb}
+.sub-badge{background:#fff3cd;color:#856404;border:1px solid #ffeeba}
+.db{background:#d1ecf1;color:#0c5460;border:1px solid #bee5eb}
+
+/* NOTE BOX */
+.notebox{
+  background:#fff8e8;
+  border:1px solid var(--gold);
+  border-left:4px solid var(--rub-light);
+  padding:.9rem 1.1rem;margin-bottom:1.8rem;
+  font-size:.88rem;color:var(--marg);font-style:italic;
+  border-radius:0 4px 4px 0;
+}
+
+/* FOOTER */
+footer{
+  background:linear-gradient(180deg,#4e1410 0%,#3a100c 100%);
+  color:#8a6a52;text-align:center;padding:1.6rem 1rem;
+  font-size:.8rem;font-style:italic;
+  border-top:2px solid var(--rub-dark);
+}
+footer a{color:var(--gold-hdr)}
+
+@media(max-width:900px){nav#toc{display:none}main{padding:1.2rem .9rem 3rem}}
+</style>
+</head>
+<body>
+<div class="bar"></div>
+<header>
+  <p class="distich">
+    <span class="verse">LVSIADAE, HANC VOBIS SAPIENTIA CONDIDIT ARCEM</span>
+    <span class="verse">DVCTORES LIBRI MILES ET ARMA LABOR</span>
+  </p>
+  <h1>Bibliografia do <span>Latim Medieval</span><br>e da Literatura Latina Medieval</h1>
+  <div class="hline"></div>
+  <div class="hline2"></div>
+  <p class="hmeta-top"><em>Ex libris sapientia</em> (Sto. Isidoro de Sevilha, <em>Etym.</em> VI)</p>
+  <p class="hmeta-bottom">Versão ampliada e revista &bull; Última actualização: 24 de Abril de 2026</p>
+</header>
+
+<div class="wrapper">
+
+<!-- TOC -->
+<nav id="toc">
+<h2>Índice Geral</h2>
+<ul>
+<li class="toc-h"><a href="#s0"><span class="rnum">Prel.</span>Nota Introdutória</a></li>
+<li class="toc-h"><a href="#s1"><span class="rnum">I.</span>Bibliografias Gerais</a></li>
+<li class="toc-h"><a href="#s2"><span class="rnum">II.</span>Bibliografias Seriadas</a></li>
+<li class="toc-h"><a href="#s3"><span class="rnum">III.</span>Latim Vulgar</a>
+  <ul class="toc-sub">
+    <li><a href="#s3a">Manuais e Gramáticas</a></li>
+    <li><a href="#s3b">Fontes e Antologias</a></li>
+    <li><a href="#s3c">Léxicos e Dicionários</a></li>
+    <li><a href="#s3d">Estudos Especializados</a></li>
+  </ul>
+</li>
+<li class="toc-h"><a href="#s4"><span class="rnum">IV.</span>Latim dos Cristãos (Antiguidade Cristã)</a>
+  <ul class="toc-sub">
+    <li><a href="#s4a">Obras de Conjunto e Patrologia</a></li>
+    <li><a href="#s4b">Língua e Estilo Cristão</a></li>
+    <li><a href="#s4c">Colecções de Textos</a></li>
+    <li><a href="#s4d">Repertórios e Claves</a></li>
+  </ul>
+</li>
+<li class="toc-h"><a href="#s5"><span class="rnum">V.</span>Dicionários e Léxicos do Latim Medieval</a></li>
+<li class="toc-h"><a href="#s6"><span class="rnum">VI.</span>Bases de Dados de Texto Integral</a></li>
+<li class="toc-h"><a href="#s7"><span class="rnum">VII.</span>Repertórios de Autores e Textos</a>
+  <ul class="toc-sub">
+    <li><a href="#s7a">Repertórios Gerais</a></li>
+    <li><a href="#s7b">Repertórios Regionais e Nacionais</a></li>
+    <li><a href="#s7c">Repertórios Temáticos</a></li>
+  </ul>
+</li>
+<li class="toc-h"><a href="#s8"><span class="rnum">VIII.</span>Enciclopédias e Obras de Referência</a></li>
+<li class="toc-h"><a href="#s9"><span class="rnum">IX.</span>Histórias Gerais da Literatura Latina Medieval</a></li>
+<li class="toc-h"><a href="#s10"><span class="rnum">X.</span>Géneros e Formas Literárias</a>
+  <ul class="toc-sub">
+    <li><a href="#s10-disc">A. Disciplinas</a>
+      <ul class="toc-sub2">
+        <li><a href="#s10-artes">Artes Liberais</a></li>
+        <li><a href="#s10-fil">Filosofia e Teologia</a></li>
+        <li><a href="#s10-sci">Ciências Naturais e Medicina</a></li>
+      </ul>
+    </li>
+    <li><a href="#s10-philol">B. Filologia e Literatura</a>
+      <ul class="toc-sub2">
+        <li><a href="#s10-lexico">Lexicografia e Linguística</a></li>
+        <li><a href="#s10-poesia">Poesia</a></li>
+        <li><a href="#s10-versif">Versificação e Prosa Rítmica</a></li>
+        <li><a href="#s10-trad">Traduções</a></li>
+      </ul>
+    </li>
+    <li><a href="#s10-genres">C. Formas e Géneros de Textos</a>
+      <ul class="toc-sub2">
+        <li><a href="#s10-agio">Hagiografia</a></li>
+        <li><a href="#s10-best">Bestiários, Herbários, Lapidários</a></li>
+        <li><a href="#s10-encic">Enciclopédias</a></li>
+        <li><a href="#s10-epist">Epistolografia e Artes dictandi</a></li>
+        <li><a href="#s10-exempl">Exempla e Favolística</a></li>
+        <li><a href="#s10-floril">Florilegia e Sententiae</a></li>
+        <li><a href="#s10-itin">Itinerários e Viagens</a></li>
+        <li><a href="#s10-litur">Liturgia</a></li>
+        <li><a href="#s10-pred">Predicação e Artes praedicandi</a></li>
+        <li><a href="#s10-specul">Specula principum</a></li>
+        <li><a href="#s10-stor">Historiografia</a></li>
+        <li><a href="#s10-teatro">Teatro Litúrgico e Profano</a></li>
+        <li><a href="#s10-tratt">Tratadística Política</a></li>
+      </ul>
+    </li>
+    <li><a href="#s10-inst">D. Instituições</a>
+      <ul class="toc-sub2">
+        <li><a href="#s10-bibl">Bibliotecas, Manuscritos</a></li>
+        <li><a href="#s10-dir">Direito e Diplomatística</a></li>
+        <li><a href="#s10-mon">Monaquismo e Ordens Religiosas</a></li>
+        <li><a href="#s10-escola">Escola e Universidade</a></li>
+      </ul>
+    </li>
+    <li><a href="#s10-spir">E. História da Cultura e Espiritualidade</a>
+      <ul class="toc-sub2">
+        <li><a href="#s10-asc">Ascética e Mística</a></li>
+        <li><a href="#s10-vis">Literatura Visionária e Profética</a></li>
+        <li><a href="#s10-rap">Relações com Culturas Não Latinas</a></li>
+      </ul>
+    </li>
+    <li><a href="#s10-aux">F. Ciências Auxiliares</a>
+      <ul class="toc-sub2">
+        <li><a href="#s10-cod">Codicologia e Paleografia</a></li>
+        <li><a href="#s10-diplo">Diplomática e Epigrafía</a></li>
+        <li><a href="#s10-icon">Iconografia</a></li>
+      </ul>
+    </li>
+  </ul>
+</li>
+<li class="toc-h"><a href="#s11"><span class="rnum">XI.</span>Paleografia, Manuscritos, Tradição Textual</a></li>
+<li class="toc-h"><a href="#s12"><span class="rnum">XII.</span>Transmissão dos Clássicos no Medievo</a></li>
+<li class="toc-h"><a href="#s13"><span class="rnum">XIII.</span>Periódicos Especializados <small style="color:var(--faded);font-style:italic">(com cotas IEC)</small></a></li>
+<li class="toc-h"><a href="#s14"><span class="rnum">XIV.</span>Colecções e Séries Editoriais</a></li>
+<li class="toc-h"><a href="#s15"><span class="rnum">XV.</span>Centros, Sociedades e Institutos</a></li>
+</ul>
+</nav>
+
+<!-- MAIN -->
+<main>
+
+<div class="notebox" id="s0">
+  <strong>Nota introdutória.</strong> Esta bibliografia reúne as obras de referência fundamentais para o estudo do Latim Medieval e da sua literatura, organizadas por domínios e, dentro de cada domínio, por ordem alfabética do apelido do autor ou do título principal. Inclui uma secção autónoma para o <em>Latim Vulgar</em> e outra para o <em>Latim dos Cristãos</em> (Antiguidade Cristã), distinguindo-os da latinidade medieval propriamente dita. Os URL são desdobrados entre parêntesis para facilitar a consulta independente das hiperligações. — As <strong>cotas das monografias</strong> nas bibliotecas da Universidade de Coimbra podem ser verificadas no catálogo integrado do SIB UC: <a href="https://webopac.sib.uc.pt/search*por~S0">webopac.sib.uc.pt</a> <span class="url">(https://webopac.sib.uc.pt/search*por~S0)</span> e no <a href="https://research.ebsco.com/c/cz3nai/search">EBSCOhost/UC</a> <span class="url">(https://research.ebsco.com/c/cz3nai/search)</span>. As cotas dos <strong>periódicos</strong> estão indicadas na secção XIII a partir da folha de receção de revistas do IEC/FLUC.
+</div>
+
+<!-- ==================== I ==================== -->
+<section class="sec" id="s1">
+<div class="sec-hdr"><span class="sec-n">I.</span><span class="sec-t">Bibliografias Gerais do Latim Medieval</span></div>
+
+<div class="e"><strong>Brunhölzl, Franz</strong> &amp; <strong>Rochais, Henri-Marie</strong>, <em>Histoire de la littérature latine du moyen âge</em>, trad. do alemão por H.-M. Rochais, com bibliografia complementar de J.-P. Bouhot, 2 vols. em 3 (Turnhout: Brepols, 1990–1996). <span class="badge sub-badge">Impressa</span><br>
+<span class="note">Tradução francesa da <em>Geschichte</em> de Brunhölzl (Munique, 1975–92), com actualizações bibliográficas.</span></div>
+
+<div class="e"><strong>Cantelli Berarducci, Silvia</strong>, "Bibliografia della letteratura mediolatina", in <em>Lo Spazio letterario del medioevo 1. Il Medioevo latino</em>, vol. V: <em>Cronologia e bibliografia della letteratura mediolatina</em> (Roma: Salerno, 1997), pp. 281–725. <a href="https://www.worldcat.org/oclc/490069540">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/490069540)</span><br>
+<span class="note">Cobertura ampla, incluindo obras gerais de referência e autores nomeados (excluindo textos anónimos), até 1328.</span></div>
+
+<div class="e"><strong>D'Angelo, Edoardo</strong>, <em>La letteratura latina medievale</em> (Napoli: Liguori, 2 versões: cronológica e por géneros). <span class="badge sub-badge">Impressa</span><br>
+<span class="note">Manual italiano de referência para o ensino universitário; dupla abordagem cronológica e genológica.</span></div>
+
+<div class="e"><strong>Friend, Albert C.</strong>, "Medieval Latin Literature", in <em>The Medieval Literature of Western Europe: A Review of Research, Mainly 1930–1960</em>, ed. John H. Fisher (Nova Iorque, 1966), pp. 3–33. <a href="https://www.worldcat.org/oclc/328015">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/328015)</span></div>
+
+<div class="e"><strong>Hays, Greg</strong>, <em>Medieval Latin: An Introductory Bibliography</em>. <span class="badge oa">OA</span><br>
+<a href="http://www.people.virginia.edu/~bgh2n/medbib.html">Disponível online</a> <span class="url">(http://www.people.virginia.edu/~bgh2n/medbib.html)</span></div>
+
+<div class="e"><strong>Kindermann, Udo</strong>, <em>Einführung in die lateinische Literatur des mittelalterlichen Europa</em> (Turnhout: Brepols, 1998). <a href="https://www.worldcat.org/oclc/43036262">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/43036262)</span><br>
+<span class="note">Inclui lista de dicionários medievais latinos, pp. 45–50.</span></div>
+
+<div class="e"><strong>Langosch, Karl</strong> (dir.), <em>Mittellateinische Dichtung. Ausgewählte Beiträge zu ihrer Erforschung</em>, <em>Wege der Forschung</em> 149 (Darmstadt: Wissenschaftliche Buchgesellschaft, 1969). <a href="https://www.worldcat.org/oclc/71461">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/71461)</span></div>
+
+<div class="e"><strong>Mantello, F. A. C. &amp; Rigg, A. G.</strong> (eds.), <em>Medieval Latin: An Introduction and Bibliographical Guide</em> (Washington, D.C.: Catholic University of America Press, 1996). <span class="badge oa">Google Books (parcial)</span><br>
+<a href="https://books.google.com/books?id=Bb32Th4WAK0C&amp;printsec=frontcover">Google Books</a> <span class="url">(https://books.google.com/books?id=Bb32Th4WAK0C)</span> &bull; <a href="https://www.worldcat.org/oclc/47010251">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/47010251)</span><br>
+<span class="note">O guia bibliográfico de referência para todos os aspectos do Latim Medieval. Inclui secções sobre linguagem bíblica e cristã, liturgia, direito, teologia, ciência, gramática, géneros literários e tradução.</span></div>
+
+<div class="e"><strong>McGuire, Martin R. P. &amp; Dressler, Hermigild</strong>, <em>Introduction to Medieval Latin Studies: A Syllabus and Bibliographic Guide</em>, 2.ª ed. (Washington: Catholic University of America Press, 1977).<br>
+<span class="note">Cobre amplamente a literatura e a cultura medievais latinas até ao século XII.</span></div>
+
+<div class="e"><strong>Nechutová, Jana</strong>, <em>Die lateinische Literatur des Mittelalters in Böhmen</em>, trad. do checo por Hildegard Boková &amp; Václav Bok (Colónia, 2007). <span class="badge sub-badge">Impressa</span></div>
+
+<div class="e"><strong>Nichols, Fred J.</strong>, "Latin Literature", in <em>The Present State of Scholarship in Fourteenth-Century Literature</em>, ed. Thomas D. Cooke (Columbia, MO, 1982). <a href="https://www.worldcat.org/oclc/8282136">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/8282136)</span></div>
+
+<div class="e"><strong>Norberg, Dag</strong>, <em>Manuel pratique de latin médiéval</em> (Paris: Picard, 1968). <span class="badge oa">Orbilat (online)</span><br>
+<a href="http://www.orbilat.com/Languages/Latin_Medieval/Dag_Norberg/index.html">Orbilat</a> <span class="url">(http://www.orbilat.com/Languages/Latin_Medieval/Dag_Norberg/index.html)</span><br>
+<span class="note">Inclui breve história do Latim Medieval, seguida de textos seleccionados com notas; excelente para a versificação.</span></div>
+
+<div class="e"><strong>Paladini, Vincenzo &amp; De Marco, Mario</strong>, <em>Lingua e letteratura mediolatina</em>, 2.ª ed. (Bologna: Pàtron, 1980). <span class="badge sub-badge">Impressa</span></div>
+
+<div class="e"><strong>Polara, Giovanni</strong>, <em>Letteratura latina tardoantica e altomedievale</em> (Roma: Jouvence, 1987). <span class="badge sub-badge">Impressa</span></div>
+
+<div class="e"><strong>Roelli, Phillipp</strong>, <em>Einführung ins Studium der lateinischen Sprache und Literatur des Mittelalters</em>, 6.ª ed. (Zurique, 2011). <span class="badge oa">OA</span><br>
+<a href="http://www.sglp.uzh.ch/static/MLS/files/Roelli_-_Mittellatein_6.pdf">PDF Zurique</a> <span class="url">(http://www.sglp.uzh.ch/static/MLS/files/Roelli_-_Mittellatein_6.pdf)</span></div>
+
+<div class="e"><strong>Sharpe, Richard</strong>, <em>Titulus: Identifying Medieval Latin Texts. An Evidence-Based Approach</em> (Turnhout: Brepols, 2003). <a href="https://www.worldcat.org/oclc/52048507">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/52048507)</span><br>
+<span class="note">Inclui "Shelf of Reference Books" anotada, pp. 251–301.</span></div>
+
+<div class="e"><strong>Sidwell, Keith</strong>, <em>Reading Medieval Latin</em> (Cambridge: Cambridge University Press, 1995). <a href="https://www.worldcat.org/oclc/33003660">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/33003660)</span></div>
+
+<div class="e"><strong>Stotz, Peter</strong>, <em>Handbuch zur lateinischen Sprache des Mittelalters</em>, 5 vols. (Munique: Beck, 1996–2004). <a href="https://www.worldcat.org/oclc/37742090">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/37742090)</span><br>
+<span class="note">Referência gramatical e linguística completa para o Latim Medieval: fonologia, morfologia, sintaxe, formação de palavras.</span></div>
+
+<div class="e"><strong>Strecker, Karl</strong>, <em>Introduction to Medieval Latin</em>, trad. rev. Robert B. Palmer (Berlim, 1957). <a href="https://www.worldcat.org/oclc/5348947">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/5348947)</span></div>
+
+<div class="e"><strong>Traube, Ludwig</strong>, <em>Einleitung in die lateinische Philologie des Mittelalters</em>, vol. 2 de <em>Vorlesungen und Abhandlungen</em>, ed. Paul Lehmann (Munique: Beck, 1911).<br>
+<span class="note">Introdução fundamental à filologia latina medieval, especialmente forte em paleografia; fundacional para a disciplina.</span></div>
+
+<div class="e"><strong>Van der Poel, Marc</strong>, <em>Bibliographia latina selecta</em>. <span class="badge oa">OA</span><br>
+<a href="http://mvdpoel.ruhosting.nl/bibliografie/bibliografie.htm">Online</a> <span class="url">(http://mvdpoel.ruhosting.nl/bibliografie/bibliografie.htm)</span></div>
+
+<div class="e"><strong>Volpi, Vittorio</strong>, <em>Dizionario delle opere classiche. Intestazioni uniformi degli autori […] della letteratura classica, medievale e bizantina</em>, 3 vols. (Milão: Bibliografica, 1994). <a href="https://www.worldcat.org/oclc/34514208">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/34514208)</span></div>
+
+<div class="e"><strong>Wright, F. A. &amp; Sinclair, T. A.</strong>, <em>A History of Later Latin Literature from the Middle of the Fourth to the End of the Seventeenth Century</em> (Londres: Routledge &amp; Kegan Paul, 1931; repr. 1969). <a href="https://www.worldcat.org/oclc/859268">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/859268)</span></div>
+
+<div class="e"><strong>ARC Bibliography — Medieval Latin Literature</strong> (Charles D. Wright). <span class="badge oa">OA</span><br>
+<a href="https://arcbibliography.org/medieval-latin-literature/">arcbibliography.org/medieval-latin-literature/</a> <span class="url">(https://arcbibliography.org/medieval-latin-literature/)</span><br>
+<span class="note">Fonte de referência on-line dos mais completos sobre todos os aspectos do Latim Medieval; organizada em oito grandes secções.</span></div>
+
+<div class="e"><strong>WEMSK 29 — Medieval Latin Literature</strong> (The ORB: Online Reference Book for Medieval Studies). <span class="badge oa">OA</span><br>
+<a href="https://the-orb.arlima.net/wemsk/medlatlitwemsk.html">the-orb.arlima.net/wemsk/medlatlitwemsk.html</a> <span class="url">(https://the-orb.arlima.net/wemsk/medlatlitwemsk.html)</span></div>
+</section>
+
+<!-- ==================== II ==================== -->
+<section class="sec" id="s2">
+<div class="sec-hdr"><span class="sec-n">II.</span><span class="sec-t">Bibliografias Seriadas (Correntes e Retrospectivas)</span></div>
+
+<div class="e"><strong><em>L'Année philologique. Bibliographie critique et analytique de l'antiquité gréco-latine</em></strong> (Paris, 1928– ). <span class="badge sub-badge">Assinatura</span><br>
+<a href="http://www.annee-philologique.com/index.php">annee-philologique.com</a> <span class="url">(http://www.annee-philologique.com/index.php)</span> &bull; <a href="https://www.worldcat.org/oclc/1481432">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/1481432)</span><br>
+<span class="note">Cobertura até ao ano 800 d.C. A versão em linha cobre 1959–presente.</span></div>
+
+<div class="e"><strong><em>Archivum Latinitatis Medii Aevi (Bulletin Du Cange)</em></strong> (Paris, 1924– ). <span class="badge sub-badge">Assinatura</span><br>
+<a href="http://documents.irevues.inist.fr/handle/2042/751">iRevues (INIST)</a> <span class="url">(http://documents.irevues.inist.fr/handle/2042/751)</span> &bull; <a href="https://www.worldcat.org/oclc/884340808">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/884340808)</span><br>
+<span class="note">A secção "Chroniques et Comptes-Rendus" inclui levantamentos bibliográficos anuais por regiões linguísticas.</span></div>
+
+<div class="e"><strong><em>Bibliographie annuelle du moyen âge tardif. Auteurs et textes latins, vers 1250–1500</em></strong>, ed. J.-P. Rothschild (Paris: CNRS / Brepols, 1991– ). <a href="https://www.worldcat.org/oclc/474407904">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/474407904)</span><br>
+<span class="note">Complementa cronologicamente o <em>Medioevo Latino</em> para o período tardio (1250–1500).</span></div>
+
+<div class="e"><strong><em>Gnomon Bibliographische Datenbank</em></strong> (Informationssystem Klassische Altertumswissenschaft, Eichstätt). <span class="badge oa">OA</span><br>
+<a href="http://www.gnomon.ku-eichstaett.de/Gnomon/en/Gnomon.html">gnomon.ku-eichstaett.de</a> <span class="url">(http://www.gnomon.ku-eichstaett.de/Gnomon/en/Gnomon.html)</span> &bull; <a href="https://www.worldcat.org/oclc/36488561">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/36488561)</span></div>
+
+<div class="e"><strong><em>IMB — International Medieval Bibliography</em></strong> (Leeds / Brepols, 1967– ). <span class="badge sub-badge">Assinatura</span><br>
+<a href="https://about.brepolis.net/imb/">about.brepolis.net/imb/</a> <span class="url">(https://about.brepolis.net/imb/)</span><br>
+<span class="note">Cobertura global da medievalística, com numerosas entradas em Latim Medieval.</span></div>
+
+<div class="e"><strong><em>Medioevo Latino. Bollettino bibliografico della cultura europea da Boezio a Erasmo (secoli VI–XV)</em></strong>, dir. Claudio Leonardi (Spoleto: CISAM / SISMEL, 1980– ). <span class="badge db">MIRABILE</span><br>
+<a href="http://www.mirabileweb.it/">mirabileweb.it</a> <span class="url">(http://www.mirabileweb.it/)</span> &bull; <a href="https://www.worldcat.org/oclc/8045004">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/8045004)</span><br>
+<span class="note">A bibliografia seriada mais abrangente para o Latim Medieval. Incorporada no MIRABILE (DB mediolatino). Estrutura em cinco partes: 1. Autores e textos (lista alfabética); 2. <em>Fortleben</em>; 3. História intelectual e institucional; 4. Obras de referência; 5. Miscelânea.</span></div>
+
+<div class="e"><strong><em>MLA International Bibliography</em></strong> (Modern Language Association, Nova Iorque). <span class="badge sub-badge">Assinatura</span><br>
+<a href="https://www.mla.org/Publications/MLA-International-Bibliography">mla.org/Publications/MLA-International-Bibliography</a> <span class="url">(https://www.mla.org/Publications/MLA-International-Bibliography)</span></div>
+
+<div class="e"><strong><em>The Year's Work in Modern Language Studies</em></strong> (1929/30– ). <span class="badge sub-badge">Assinatura</span><br>
+<a href="https://brill.com/view/journals/ywml/ywml-overview.xml">Brill Online</a> <span class="url">(https://brill.com/view/journals/ywml/ywml-overview.xml)</span> &bull; <a href="https://www.worldcat.org/oclc/1770339">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/1770339)</span></div>
+</section>
+
+<!-- ==================== III — LATIM VULGAR ==================== -->
+<section class="sec" id="s3">
+<div class="sec-hdr"><span class="sec-n">III.</span><span class="sec-t">Latim Vulgar</span></div>
+
+<div class="sub" id="s3a"><div class="sub-t">III.1. Manuais, Gramáticas e Histórias da Língua</div>
+
+<div class="e"><strong>Adams, James Noel</strong>, <em>The Regional Diversification of Latin, 200 BC – AD 600</em> (Cambridge: Cambridge University Press, 2007). <a href="https://www.worldcat.org/oclc/74829455">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/74829455)</span></div>
+
+<div class="e"><strong>Adams, James Noel</strong>, <em>Social Variation and the Latin Language</em> (Cambridge: Cambridge University Press, 2013). <a href="https://www.worldcat.org/oclc/812686975">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/812686975)</span></div>
+
+<div class="e"><strong>Adams, James Noel</strong>, <em>Bilingualism and the Latin Language</em> (Cambridge: Cambridge University Press, 2003). <a href="https://www.worldcat.org/oclc/51519765">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/51519765)</span></div>
+
+<div class="e"><strong>Banniard, Michel</strong>, <em>Viva voce. Communication écrite et communication orale du IVe au IXe siècle en Occident latin</em> (Paris: Institut des Études Augustiniennes, 1992). <a href="https://www.worldcat.org/oclc/28254015">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/28254015)</span></div>
+
+<div class="e"><strong>Grandgent, Charles Hall</strong>, <em>An Introduction to Vulgar Latin</em> (Boston: D.C. Heath, 1907; repr. New York: Hafner, 1962). <a href="https://www.worldcat.org/oclc/256004">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/256004)</span></div>
+
+<div class="e"><strong>Haadsma, R. A. &amp; Nuchelmans, J.</strong>, <em>Précis de latin vulgaire</em> (Groningue: Wolters, 1963). <span class="badge sub-badge">Impressa</span></div>
+
+<div class="e"><strong>Herman, József</strong>, <em>Le Latin vulgaire</em>, 2.ª ed. (Paris: Presses Universitaires de France, 1975; trad. ingl.: <em>Vulgar Latin</em>, trad. R. Wright, Pennsylvania, 2000). <a href="https://www.worldcat.org/oclc/44594516">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/44594516)</span><br>
+<span class="note">A síntese mais acessível e influente; a tradução inglesa inclui actualização bibliográfica.</span></div>
+
+<div class="e"><strong>Hofmann, Johann Baptist</strong>, <em>Lateinische Umgangssprache</em>, 3.ª ed. (Heidelberg: Winter, 1951). <a href="https://www.worldcat.org/oclc/1126855">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/1126855)</span></div>
+
+<div class="e"><strong>Löfstedt, Einar</strong>, <em>Late Latin</em>, <em>Instituttet for Sammenlignende Kulturforskning</em>, ser. A, 25 (Oslo: Aschehoug, 1959). <a href="https://www.worldcat.org/oclc/1524618">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/1524618)</span></div>
+
+<div class="e"><strong>Löfstedt, Einar</strong>, <em>Syntactica. Studien und Beiträge zur historischen Syntax des Lateins</em>, 2 vols. (Lund: Gleerup, 1928–33). <a href="https://www.worldcat.org/oclc/9680671">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/9680671)</span></div>
+
+<div class="e"><strong>Löfstedt, Einar</strong>, <em>Philologischer Kommentar zur Peregrinatio Aetheriae. Untersuchungen zur Geschichte der lateinischen Sprache</em> (Uppsala: Almqvist &amp; Wiksell, 1911). <a href="https://www.worldcat.org/oclc/2480015">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/2480015)</span></div>
+
+<div class="e"><strong>Mohrmann, Christine</strong>, <em>Latin vulgaire, latin des chrétiens, latin médiéval</em> (Paris: Klincksieck, 1955). <a href="https://www.worldcat.org/oclc/3434984">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/3434984)</span></div>
+
+<div class="e"><strong>Norberg, Dag</strong>, <em>Beiträge zur spätlateinischen Syntax</em> (Uppsala: Almqvist &amp; Wiksell, 1944). <a href="https://www.worldcat.org/oclc/6481987">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/6481987)</span></div>
+
+<div class="e"><strong>Norberg, Dag</strong>, <em>Syntaktische Forschungen auf dem Gebiete des Spätlateins und des frühen Mittellateins</em> (Uppsala: Lundequist, 1943). <a href="https://www.worldcat.org/oclc/3882337">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/3882337)</span></div>
+
+<div class="e"><strong>Schrijnen, Joseph</strong>, <em>Charakteristik des altchristlichen Latein</em>, <em>Studia ad sermonem Latinum Christianum pertinentia</em> 1 (Nimègue: Dekker &amp; Van de Vegt, 1932). <a href="https://www.worldcat.org/oclc/11649621">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/11649621)</span></div>
+
+<div class="e"><strong>Väänänen, Veikko</strong>, <em>Introduction au latin vulgaire</em>, 3.ª ed. rev. e aum. (Paris: Klincksieck, 1981). <a href="https://www.worldcat.org/oclc/8173984">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/8173984)</span><br>
+<span class="note">O manual de referência por excelência; tradução italiana (Pàtron, 1974).</span></div>
+
+<div class="e"><strong>Väänänen, Veikko</strong>, <em>Le latin vulgaire des inscriptions pompéiennes</em>, 3.ª ed. (Berlim: Akademie-Verlag, 1966). <a href="https://www.worldcat.org/oclc/2226699">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/2226699)</span></div>
+
+<div class="e"><strong>Wright, Roger</strong>, <em>Late Latin and Early Romance in Spain and Carolingian France</em> (Liverpool: Francis Cairns, 1982). <a href="https://www.worldcat.org/oclc/9043286">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/9043286)</span></div>
+
+<div class="e"><strong>Wright, Roger</strong>, <em>A Sociophilological Study of Late Latin</em>, <em>Utrecht Studies in Medieval Literacy</em> 10 (Turnhout: Brepols, 2002). <a href="https://www.worldcat.org/oclc/51022065">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/51022065)</span></div>
+
+<div class="e"><strong><em>Actes des Colloques internationaux sur le latin vulgaire et tardif</em></strong> (Pécs, 1985– ; Bolonha, 1988; Innsbruck, 1992; Caen, 1994; Heidelberg, 1997; Helsinki, 2000; Sevilla, 2003; Oxford, 2006; Lión, 2009; Bergamo, 2012…). <span class="badge sub-badge">Série de Actas</span><br>
+<span class="note">Série indispensável de actas que reflecte o estado da investigação sobre o Latim Tardio e Vulgar desde 1985.</span></div>
+</div>
+
+<div class="sub" id="s3b"><div class="sub-t">III.2. Fontes, Crestomatias e Antologias</div>
+
+<div class="e"><strong>Bonnet, Max</strong>, <em>Le Latin de Grégoire de Tours</em> (Paris: Hachette, 1890). <a href="https://www.worldcat.org/oclc/2267126">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/2267126)</span></div>
+
+<div class="e"><strong>Muller, Henri François &amp; Taylor, Pauline</strong>, <em>A Chrestomathy of Vulgar Latin</em> (Boston: D.C. Heath, 1932). <a href="https://www.worldcat.org/oclc/1004614">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/1004614)</span></div>
+
+<div class="e"><strong>Rohlfs, Gerhard</strong>, <em>Sermo vulgaris Latinus. Vulgärlateinisches Lesebuch</em>, 3.ª ed. (Tübingen: Niemeyer, 1969). <a href="https://www.worldcat.org/oclc/1059462">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/1059462)</span></div>
+</div>
+
+<div class="sub" id="s3c"><div class="sub-t">III.3. Léxicos e Instrumentos Lexicais (Latim Tardio e Vulgar)</div>
+
+<div class="e"><strong>Blaise, Albert</strong>, <em>Dictionnaire latin–français des auteurs chrétiens</em>, rev. H. Chirat (Turnhout: Brepols, 1954; reimp. 1993). <a href="https://www.worldcat.org/oclc/459817">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/459817)</span></div>
+
+<div class="e"><strong>Blaise, Albert</strong>, <em>Lexicon latinitatis Medii Aevi praesertim ad res ecclesiasticas investigandas pertinens</em>, <em>CCCM</em> (Turnhout: Brepols, 1975). <a href="https://www.worldcat.org/oclc/2259673">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/2259673)</span></div>
+
+<div class="e"><strong>Souter, Alexander</strong>, <em>A Glossary of Later Latin to 600 A.D.</em> (Oxford: Clarendon Press, 1949). <a href="https://www.worldcat.org/oclc/14677428">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/14677428)</span></div>
+</div>
+
+<div class="sub" id="s3d"><div class="sub-t">III.4. Estudos Especializados sobre o Latim Tardio e Vulgar</div>
+
+<div class="e"><strong>Adams, James Noel</strong>, <em>The Text and Language of a Vulgar Latin Chronicle (Anonymus Valesianus II)</em>, <em>BICS Suppl.</em> 36 (Londres, 1976). <a href="https://www.worldcat.org/oclc/3284956">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/3284956)</span></div>
+
+<div class="e"><strong>Baehrens, Wilhelm Adolf</strong>, <em>Sprachlicher Kommentar zur vulgärlateinischen Appendix Probi</em> (Halle, 1922). <a href="https://www.worldcat.org/oclc/17530028">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/17530028)</span></div>
+
+<div class="e"><strong>Eklund, Sten</strong>, <em>The Periphrastic, Completive and Finite Use of the Present Participle in Latin</em> (Uppsala, 1970). <span class="badge sub-badge">Impressa</span></div>
+
+<div class="e"><strong>Herman, József</strong>, <em>Du latin aux langues romanes. Études de linguistique historique</em>, réunies par Sándor Kiss (Tübingen: Niemeyer, 1990). <a href="https://www.worldcat.org/oclc/22875337">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/22875337)</span></div>
+
+<div class="e"><strong>Mihaescu, Haralambie</strong>, <em>La langue latine dans le sud-est de l'Europe</em> (Bucarest / Paris, 1978). <a href="https://www.worldcat.org/oclc/4685553">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/4685553)</span></div>
+
+<div class="e"><strong>Niedermann, Max</strong>, <em>Précis de phonétique historique du latin</em>, 4.ª ed. (Paris: Klincksieck, 1959). <a href="https://www.worldcat.org/oclc/3218413">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/3218413)</span></div>
+
+<div class="e"><strong>Pei, Mario A.</strong>, <em>The Language of the Eighth-Century Texts in Northern France</em> (Nova Iorque, 1932). <span class="badge sub-badge">Impressa</span></div>
+</div>
+</section>
+
+<!-- ==================== IV — LATIM DOS CRISTÃOS ==================== -->
+<section class="sec" id="s4">
+<div class="sec-hdr"><span class="sec-n">IV.</span><span class="sec-t">Latim dos Cristãos e Antiguidade Cristã</span></div>
+
+<div class="sub" id="s4a"><div class="sub-t">IV.1. Obras de Conjunto, Patrologias e Histórias da Literatura Cristã</div>
+
+<div class="e"><strong>Altaner, Berthold &amp; Stuiber, Alfred</strong>, <em>Patrologie. Leben, Schriften und Lehre der Kirchenväter</em>, 9.ª ed. (Freiburg i.Br.: Herder, 1978; trad. fr.: <em>Précis de patrologie</em>). <a href="https://www.worldcat.org/oclc/5343697">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/5343697)</span></div>
+
+<div class="e"><strong>Bardenhewer, Otto</strong>, <em>Geschichte der altkirchlichen Literatur</em>, 5 vols. (Freiburg i.Br.: Herder, 1913–32). <a href="https://www.worldcat.org/oclc/1636254">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/1636254)</span></div>
+
+<div class="e"><strong>Bertini, Ferruccio</strong> (coord.), <em>Letteratura latina medievale (secoli VI–XV). Un manuale</em> (Gênova: DARFICLET, 1988; eds. revisadas, Firenze: SISMEL). <span class="badge sub-badge">Impressa</span><br>
+<span class="note">Cada capítulo abrange um século; os capítulos de Jacobsen (séc. IX), Lapidge (séc. VIII) e Dronke (séc. XII) são estudos de referência.</span></div>
+
+<div class="e"><strong>Cayré, Fulbert</strong>, <em>Précis de patrologie et d'histoire de la théologie</em>, 3 vols. (Paris: Desclée, 1930–43). <a href="https://www.worldcat.org/oclc/2613248">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/2613248)</span></div>
+
+<div class="e"><strong>Courcelle, Pierre</strong>, "La Littérature latine d'époque patristique: directions de recherches", in <em>Actes du Ier Congrès de la Fédération internationale des associations d'études classiques</em> (Paris, 1951).</div>
+
+<div class="e"><strong>Hamman, Adalbert-Gautier</strong>, <em>Guide pratique des Pères de l'Église</em>, 3.ª ed. (Paris: Desclée de Brouwer, 1967). <a href="https://www.worldcat.org/oclc/745918">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/745918)</span></div>
+
+<div class="e"><strong>Labriolle, Pierre de</strong>, <em>Histoire de la littérature latine chrétienne</em>, 3.ª ed. rev. Gustave Bardy, 2 vols. (Paris: Les Belles Lettres, 1947). <a href="https://www.worldcat.org/oclc/464219">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/464219)</span></div>
+
+<div class="e"><strong>Manitius, Max</strong>, <em>Geschichte der christlich-lateinischen Poesie bis zur Mitte des 8. Jahrhunderts</em> (Stuttgart: Cotta, 1891). <a href="https://www.worldcat.org/oclc/5282038">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/5282038)</span></div>
+
+<div class="e"><strong>Quasten, Johannes</strong>, <em>Patrology</em> (= <em>Initiation aux Pères de l'Église</em>, trad. J. Laporte), 4 vols. (Utrecht / Westminister / Paris: Cerf, 1950–86). <a href="https://www.worldcat.org/oclc/4806">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/4806)</span><br>
+<span class="note">O guia patrológico de referência para o período pré-niceno e pós-niceno em latim (vols. I–III); vol. IV póstumo.</span></div>
+
+<div class="e"><strong>Schanz, Martin; Hosius, Carl &amp; Krüger, Gustav</strong>, <em>Geschichte der römischen Literatur bis zum Gesetzgebungswerk des Kaisers Justinian</em>, 4 vols., <em>Handbuch der Altertumswissenschaft</em> VIII (Munique: Beck, 1914–35).<br>
+<span class="note">Inclui os autores cristãos da Antiguidade Tardia até Justiniano.</span></div>
+</div>
+
+<div class="sub" id="s4b"><div class="sub-t">IV.2. Língua, Estilo e Vocabulário do Latim Cristão</div>
+
+<div class="e"><strong>Bardy, Gustave</strong>, <em>La Question des langues dans l'Église ancienne</em>, I (Paris: Beauchesne, 1948). <a href="https://www.worldcat.org/oclc/3421891">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/3421891)</span></div>
+
+<div class="e"><strong>Blaise, Albert</strong>, <em>Manuel du latin chrétien</em> (Strasbourg: Le Latin Chrétien, 1955; reimp. Turnhout: Brepols, 1986). <a href="https://www.worldcat.org/oclc/3038965">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/3038965)</span></div>
+
+<div class="e"><strong>Mohrmann, Christine</strong>, <em>Études sur le latin des chrétiens</em>, 4 vols. (<em>Storia e Letteratura</em> 65, 87, 103, 143; Roma, 1958–77). <a href="https://www.worldcat.org/oclc/4466041">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/4466041)</span><br>
+<span class="note">Colectânea dos artigos fundamentais de Mohrmann sobre a língua dos cristãos, o latim litúrgico e o bilinguismo.</span></div>
+
+<div class="e"><strong>Mohrmann, Christine</strong>, <em>Liturgical Latin: Its Origins and Character</em> (Londres: Burns &amp; Oates, 1959). <a href="https://www.worldcat.org/oclc/2456948">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/2456948)</span></div>
+
+<div class="e"><strong>Mohrmann, Christine</strong>, "Le latin vulgaire et le latin médiéval", in <em>Latin vulgaire, latin des chrétiens, latin médiéval</em> (Paris: Klincksieck, 1955), pp. 1–15.</div>
+
+<div class="e"><strong>Sanders, Gabriel &amp; Van Uytfanghe, Marc</strong>, <em>Bibliographie signalétique du Latin des Chrétiens</em>, <em>Corpus Christianorum Lingua Patrum</em> 1 (Turnhout: Brepols, 1989). <a href="https://www.worldcat.org/oclc/20100607">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/20100607)</span><br>
+<span class="note">Inclui índice de palavras latinas; instrumento indispensável para o latim cristão.</span></div>
+
+<div class="e"><strong>Schrijnen, Joseph &amp; Mohrmann, Christine</strong>, <em>Studien zur Syntax der Briefe des hl. Cyprian</em>, 2 vols., <em>Latinitas Christianorum Primaeva</em> 5–6 (Nimègue: Dekker &amp; Van de Vegt, 1936–37). <a href="https://www.worldcat.org/oclc/8126745">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/8126745)</span></div>
+
+<div class="e"><strong>Sieben, Hermann Josef</strong>, <em>Voces: Eine Bibliographie zu Wörtern und Begriffen aus der Patristik (1918–1978)</em> (Berlim: De Gruyter, 1980). <a href="https://www.worldcat.org/oclc/6787207">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/6787207)</span></div>
+
+<div class="e"><strong>Van Uytfanghe, Marc</strong>, "Latin mérovingien, latin carolingien et <em>rustica romana lingua</em>: continuité ou discontinuité?", <em>Revue de l'Université de Bruxelles</em> 1–2 (1976), 65–88.</div>
+</div>
+
+<div class="sub" id="s4c"><div class="sub-t">IV.3. Colecções de Edições de Autores Cristãos</div>
+
+<div class="e"><strong>Corpus Christianorum, Series Latina (CCSL)</strong> (Turnhout: Brepols, 1954– ). <span class="badge sub-badge">Assinatura (LLT)</span><br>
+<a href="https://www.corpuschristianorum.org/">corpuschristianorum.org</a> <span class="url">(https://www.corpuschristianorum.org/)</span><br>
+<span class="note">Mais de 228 volumes; textos cristãos latinos dos oito primeiros séculos.</span></div>
+
+<div class="e"><strong>Corpus Christianorum, Continuatio Mediaevalis (CCCM)</strong> (Turnhout: Brepols, 1966– ). <span class="badge sub-badge">Assinatura (LLT)</span><br>
+<a href="https://www.corpuschristianorum.org/">corpuschristianorum.org</a> <span class="url">(https://www.corpuschristianorum.org/)</span><br>
+<span class="note">Mais de 372 volumes; textos da época carolíngia ao final da Idade Média.</span></div>
+
+<div class="e"><strong>Corpus Scriptorum Ecclesiasticorum Latinorum (CSEL)</strong> (Viena: Hölder-Pichler-Tempsky / De Gruyter, 1866– ). <span class="badge sub-badge">Assinatura</span></div>
+
+<div class="e"><strong>Patrologia Latina (PL)</strong>, ed. J.-P. Migne, 221 vols. (Paris, 1844–55; reimp. Turnhout: Brepols). <span class="badge sub-badge">Assinatura / OA parcial</span><br>
+<a href="https://pld.chadwyck.co.uk/">Chadwyck-Healey PLD Online</a> <span class="url">(https://pld.chadwyck.co.uk/)</span><br>
+<span class="note">Disponível também via Corpus Corporum (parcialmente em OA).</span></div>
+
+<div class="e"><strong>Sources Chrétiennes (SC)</strong> (Paris: Cerf, 1941– ). <span class="badge sub-badge">Impressa (mais de 600 volumes)</span><br>
+<a href="https://www.sources-chretiennes.mom.fr/">sources-chretiennes.mom.fr</a> <span class="url">(https://www.sources-chretiennes.mom.fr/)</span></div>
+
+<div class="e"><strong>Fathers of the Church (FC)</strong> (Washington, D.C.: Catholic University of America Press, 1947– ). <span class="badge sub-badge">Impressa</span></div>
+</div>
+
+<div class="sub" id="s4d"><div class="sub-t">IV.4. Repertórios e Clavibus (Autores Cristãos Latinos)</div>
+
+<div class="e"><strong>Clavis Clavium</strong> (Brepols / KU Leuven / Société des Bollandistes). <span class="badge oa">OA</span><br>
+<a href="https://clavis.brepols.net/clacla">clavis.brepols.net/clacla</a> <span class="url">(https://clavis.brepols.net/clacla)</span><br>
+<span class="note">Integra seis <em>claves</em>: CPL, BHL, CAVT, CANT; cerca de 8000 páginas de dados sobre autores e textos cristãos.</span></div>
+
+<div class="e"><strong>Clavis Patrum Latinorum (CPL)</strong>, ed. Eligius Dekkers &amp; Aemilius Gaar, 3.ª ed. (Steenbrugge / Turnhout: Brepols, 1995). <a href="https://www.worldcat.org/oclc/34518455">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/34518455)</span><br>
+<span class="note">Repertório canónico de Tertuliano a Beda; com referências às edições críticas e à tradição manuscrita.</span></div>
+
+<div class="e"><strong>Clavis Patristica Pseudepigraphorum Medii Aevi (CPPM)</strong>, ed. Johannes Machielsen, 4 vols. (Turnhout: Brepols, 1990–94). <a href="https://www.worldcat.org/oclc/21330003">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/21330003)</span><br>
+<a href="https://www.corpuschristianorum.org/cppm">corpuschristianorum.org/cppm</a> <span class="url">(https://www.corpuschristianorum.org/cppm)</span></div>
+
+<div class="e"><strong>Frede, Hermann Josef</strong>, <em>Kirchenschriftsteller: Verzeichnis und Sigel</em>, <em>VETUS LATINA: Die Reste der altlateinischen Bibel</em> 1/1, 4.ª ed. (Freiburg i.Br.: Herder, 1995). <a href="https://www.worldcat.org/oclc/34278832">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/34278832)</span></div>
+</div>
+</section>
+
+<!-- ==================== V — DICIONÁRIOS ==================== -->
+<section class="sec" id="s5">
+<div class="sec-hdr"><span class="sec-n">V.</span><span class="sec-t">Dicionários e Léxicos do Latim Medieval</span></div>
+
+<div class="e"><strong>Arnaldi, Franciscus &amp; Smiraglia, Paschalis</strong> (eds.), <em>Latinitatis Italicae Medii Aevi Lexicon (saec. V ex. – saec. XI in.)</em>, 2.ª ed. (Florença: SISMEL, 2001). <a href="https://www.worldcat.org/oclc/48540186">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/48540186)</span></div>
+
+<div class="e"><strong>Buridant, Claude</strong>, <em>La lexicographie au moyen âge</em> (Lille, 1986). <a href="https://www.worldcat.org/oclc/16347853">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/16347853)</span></div>
+
+<div class="e"><strong>Coleman, Kathleen M.</strong>, "Latin Lexicography", <em>Oxford Bibliographies Online: Classics</em>. <span class="badge sub-badge">Assinatura</span><br>
+<a href="http://www.oxfordbibliographies.com/view/document/obo-9780195389661/obo-9780195389661-0032.xml">Oxford Bibliographies</a> <span class="url">(http://www.oxfordbibliographies.com/view/document/obo-9780195389661/obo-9780195389661-0032.xml)</span></div>
+
+<div class="e"><strong>Conde Salazar, Matilde &amp; Martín Puente, Cristina</strong>, <em>Lexicografía y lexicología latinas (1975–1997). Repertorio bibliográfico</em> (Madrid: CSIC, 1998). <a href="https://www.worldcat.org/oclc/40518678">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/40518678)</span></div>
+
+<div class="e"><strong>Cousin, Jean</strong>, <em>Bibliographie de la langue latine, 1880–1948</em> (Paris: Les Belles Lettres, 1951). <a href="https://www.worldcat.org/oclc/1218905">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/1218905)</span></div>
+
+<div class="e"><strong>Cupaiuolo, Fabio</strong>, <em>Bibliografia della lingua latina (1949–1991)</em> (Napoli: Loffredo, 1993). <a href="https://www.worldcat.org/oclc/30118852">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/30118852)</span></div>
+
+<div class="e"><strong>Dictionary of Medieval Latin from British Sources (DMLBS)</strong>, ed. R. E. Latham et al. (Oxford: British Academy / Oxford University Press, 1975–2013). <span class="badge oa">OA</span><br>
+<a href="http://www.dmlbs.ox.ac.uk/">dmlbs.ox.ac.uk</a> <span class="url">(http://www.dmlbs.ox.ac.uk/)</span></div>
+
+<div class="e"><strong>Dictionary of Medieval Latin from Celtic Sources (DMLCS)</strong>, ed. A. Harvey et al. (Dublin: Royal Irish Academy, 2007– ). <span class="badge oa">OA</span><br>
+<a href="http://journals.eecs.qub.ac.uk/dmlcs/index.html">journals.eecs.qub.ac.uk/dmlcs/</a> <span class="url">(http://journals.eecs.qub.ac.uk/dmlcs/index.html)</span></div>
+
+<div class="e"><strong>Du Cange, Charles du Fresne</strong>, <em>Glossarium Mediae et Infimae Latinitatis</em>, ed. G. A. L. Henschel &amp; L. Favre, 10 vols. (Niort, 1883–87). <span class="badge oa">OA online</span><br>
+<a href="http://ducange.enc.sorbonne.fr/">ducange.enc.sorbonne.fr</a> <span class="url">(http://ducange.enc.sorbonne.fr/)</span></div>
+
+<div class="e"><strong>Forcellini, Egidio</strong>, <em>Lexicon totius Latinitatis</em>, 6 vols. (Patavii, 1864–1926). <span class="badge oa">OA online</span><br>
+<a href="http://www.lexica.linguax.com/forc.php">Lexica.linguax.com</a> <span class="url">(http://www.lexica.linguax.com/forc.php)</span></div>
+
+<div class="e"><strong>Glossarium Mediae Latinitatis Sueciae</strong> (Stockholm: Almqvist &amp; Wiksell, 1968– ). <a href="https://www.worldcat.org/oclc/7458413">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/7458413)</span></div>
+
+<div class="e"><strong>Hamesse, Jacqueline</strong> (ed.), <em>Les manuscrits des lexiques et glossaires de l'Antiquité tardive à la fin du moyen âge</em> (Turnhout: Brepols, 1996). <a href="https://www.worldcat.org/oclc/36345312">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/36345312)</span></div>
+
+<div class="e"><strong>Hiltbrunner, Otto</strong>, <em>Bibliographie zur lateinischen Wortforschung</em> (Bern: Francke, 1981– ). <a href="https://www.worldcat.org/oclc/8593744">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/8593744)</span><br>
+<span class="note">4 vols. pub.: A–acutus (1981), adeo–atrocitas (1984), atrax–causa (1988), censeo–cura (1992).</span></div>
+
+<div class="e"><strong>Lateinisch-altdeutsches Glossar</strong> — ver <em>Steinmeyer &amp; Sievers, Die althochdeutschen Glossen</em>, 5 vols. (Berlim, 1879–1922).</div>
+
+<div class="e"><strong>Latham, Ronald Edward</strong>, <em>Revised Medieval Latin Word-List from British and Irish Sources</em> (Londres: British Academy / Oxford University Press, 1965). <a href="https://www.worldcat.org/oclc/369601">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/369601)</span></div>
+
+<div class="e"><strong>Latinitatis Medii Aevi Lexicon Bohemorum</strong>. <span class="badge oa">OA</span><br>
+<a href="http://lb.ics.cas.cz/">lb.ics.cas.cz</a> <span class="url">(http://lb.ics.cas.cz/)</span></div>
+
+<div class="e"><strong>Lewis, Charlton T. &amp; Short, Charles</strong>, <em>A Latin Dictionary</em> (Oxford: Clarendon Press, 1879). <span class="badge oa">OA</span><br>
+<a href="http://www.perseus.tufts.edu/hopper/search?doc=Perseus%3atext%3a1999.04.0059">Perseus Digital Library</a> <span class="url">(http://www.perseus.tufts.edu/hopper/search)</span></div>
+
+<div class="e"><strong>Lexicon Mediae et Infimae Latinitatis Polonorum</strong>. <span class="badge oa">OA</span><br>
+<a href="http://scriptores.pl/lexicon/">scriptores.pl/lexicon/</a> <span class="url">(http://scriptores.pl/lexicon/)</span></div>
+
+<div class="e"><strong>Marangoni, Claudio</strong>, <em>Supplementum etymologicum latinum</em>, I (Trieste: EUT, 2007). <a href="https://www.worldcat.org/oclc/231580432">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/231580432)</span></div>
+
+<div class="e"><strong>Merrilees, Brian</strong>, "The Shape of the Medieval Dictionary Entry", <em>Digital Studies / Le Champ Numérique</em> (1996). <span class="badge oa">OA</span><br>
+<a href="http://doi.org/10.16995/dscn.201">doi.org/10.16995/dscn.201</a> <span class="url">(http://doi.org/10.16995/dscn.201)</span></div>
+
+<div class="e"><strong>Niermeyer, Jan Frederik &amp; Van de Kieft, Co</strong>, <em>Mediae Latinitatis Lexicon Minus</em>, 2.ª ed. rev. J. W. J. Burgers, 2 vols. (Leiden: Brill, 2002). <a href="https://www.worldcat.org/oclc/2807854">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/2807854)</span></div>
+
+<div class="e"><strong>Oxford Latin Dictionary (OLD)</strong>, ed. P. G. W. Glare, 2.ª ed., 2 vols. (Oxford: Oxford University Press, 2012). <span class="badge sub-badge">Assinatura</span><br>
+<a href="http://www.oxfordscholarlyeditions.com/page/the-oxford-latin-dictionary">Oxford Scholarly Editions</a> <span class="url">(http://www.oxfordscholarlyeditions.com/page/the-oxford-latin-dictionary)</span></div>
+
+<div class="e"><strong>Thesaurus Linguae Latinae (TLL)</strong> (Leipzig: Teubner / De Gruyter, 1900– ). <span class="badge sub-badge">Assinatura</span><br>
+<a href="http://www.degruyter.com/databasecontent?dbid=tll">De Gruyter Online</a> <span class="url">(http://www.degruyter.com/databasecontent?dbid=tll)</span> &bull; <a href="https://www.worldcat.org/oclc/14333909">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/14333909)</span></div>
+
+<div class="e"><strong>Thesaurus Formarum Totius Latinitatis / CETEDOC Index of Latin Forms</strong> (Turnhout: Brepols, 1988– ). <a href="https://www.worldcat.org/oclc/78967096">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/78967096)</span></div>
+
+<div class="e"><strong>Trembley, F. A.</strong>, <em>Bibliotheca Lexicologiae Medii Aevi</em>, 10 vols. (Lewiston: Mellen Press, 1988). <a href="https://www.worldcat.org/oclc/16755858">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/16755858)</span></div>
+
+<div class="e"><strong>Weijers, Olga</strong>, <em>Dictionnaires et répertoires au Moyen Âge: une étude du vocabulaire</em> (Turnhout: Brepols, 1991). <a href="https://www.worldcat.org/oclc/24523610">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/24523610)</span></div>
+
+<div class="e"><strong>Weijers, Olga</strong>, "Lexicography in the Middle Ages", <em>Viator</em> 20 (1989), 139–53. <a href="https://www.worldcat.org/oclc/961364970">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/961364970)</span></div>
+
+<div class="sub2"><div class="sub2-t">Compêndios Lexicográficos Medievais Principais</div>
+<div class="e"><strong>Isidoro de Sevilha</strong>, <em>Etymologiarum sive Originum libri XX</em>, ed. W. M. Lindsay, 2 vols. (Oxford: Clarendon Press, 1911). <span class="badge oa">OA HathiTrust</span><br>
+<a href="https://catalog.hathitrust.org/Record/001221010">HathiTrust</a> <span class="url">(https://catalog.hathitrust.org/Record/001221010)</span> &bull; Trad. inglesa: ed. Stephen Barney (Cambridge: CUP, 2006). <a href="https://www.worldcat.org/oclc/56942080">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/56942080)</span></div>
+<div class="e"><strong>Osborn de Gloucester</strong>, <em>Derivationes</em>, ed. Paola Busdraghi et al., 2 vols., <em>Biblioteca di Medioevo Latino</em> 16 (Spoleto: CISAM, 1996). <a href="https://www.worldcat.org/oclc/905430549">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/905430549)</span></div>
+<div class="e"><strong>Uguccione da Pisa (Hugutius Pisanus)</strong>, <em>Derivationes (Magnae Derivationes)</em>, ed. Enzo Cecchini et al., 2 vols., <em>Edizione Nazionale dei Testi Mediolatini</em> (Florença, 2004). <a href="https://www.worldcat.org/oclc/799774376">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/799774376)</span></div>
+</div>
+</section>
+
+<!-- ==================== VI — BASES DE DADOS ==================== -->
+<section class="sec" id="s6">
+<div class="sec-hdr"><span class="sec-n">VI.</span><span class="sec-t">Bases de Dados de Texto Integral (Latim Tardio e Medieval)</span></div>
+
+<div class="e"><strong>BREPOLIS Latin (LLT-A + LLT-B) — Library of Latin Texts</strong> (Brepols). <span class="badge sub-badge">Assinatura</span><br>
+<a href="https://about.brepolis.net/library-of-latin-texts/">about.brepolis.net/library-of-latin-texts/</a> <span class="url">(https://about.brepolis.net/library-of-latin-texts/)</span><br>
+<span class="note">LLT-A: textos das origens ao século II. LLT-B: textos medievais e humanísticos. Versão electrónica de uma parte do <em>Corpus Christianorum</em>.</span></div>
+
+<div class="e"><strong>Bibliotheca Latina: Latinitas Mediaevalis</strong> (IntraText / Èulogos). <span class="badge oa">OA — Creative Commons</span><br>
+<a href="http://www.intratext.com/Latina/Mediaevalis/">intratext.com/Latina/Mediaevalis/</a> <span class="url">(http://www.intratext.com/Latina/Mediaevalis/)</span><br>
+<span class="note">Biblioteca digital gratuita de textos latinos medievais (sécs. VII–XIV); mais de cem autores; concordâncias e estatísticas.</span></div>
+
+<div class="e"><strong>Bibliotheca Teubneriana Latina (BTL)</strong> (Berlin / Boston: De Gruyter, 1999– ). <span class="badge sub-badge">Assinatura</span><br>
+<a href="http://www.degruyter.com/databasecontent?dbid=btl">De Gruyter Online</a> <span class="url">(http://www.degruyter.com/databasecontent?dbid=btl)</span></div>
+
+<div class="e"><strong>Corpus Corporum. Repositorium operum Latinorum apud Universitatem Turicensem</strong> (Universidade de Zurique). <span class="badge oa">OA</span><br>
+<a href="http://mlat.uzh.ch/MLS/index.php?lang=0">mlat.uzh.ch</a> <span class="url">(http://mlat.uzh.ch/MLS/index.php?lang=0)</span><br>
+<span class="note">Inclui PL, dMGH e muitas outras colecções; permite pesquisas lematizadas.</span></div>
+
+<div class="e"><strong>dMGH — Monumenta Germaniae Historica (edições digitais)</strong>. <span class="badge oa">OA</span><br>
+<a href="https://www.dmgh.de/">dmgh.de</a> <span class="url">(https://www.dmgh.de/)</span><br>
+<span class="note">Acesso pleno às séries <em>Scriptores</em>, <em>Leges</em>, <em>Diplomata</em>, <em>Epistolae</em>, <em>Antiquitates</em> e 33 sub-séries.</span></div>
+
+<div class="e"><strong>MIRABILE: Archivio Digitale della Cultura Latina Medievale</strong> (SISMEL, Firenze). <span class="badge db">Assinatura/OA parcial</span><br>
+<a href="http://www.mirabileweb.it/">mirabileweb.it</a> <span class="url">(http://www.mirabileweb.it/)</span><br>
+<span class="note">Agrega CALMA, BISLAM, <em>Medioevo Latino</em>, <em>Filologia Mediolatina</em>, <em>Hagiographica</em>, <em>Documenti e Studi</em> e outros. Mais de 15.000 entradas de autores e 80.000 variantes de nomes.</span></div>
+
+<div class="e"><strong>Patrologia Latina Database</strong>, ed. Migne / Chadwyck-Healey, 221 vols. <span class="badge sub-badge">Assinatura</span><br>
+<a href="https://pld.chadwyck.co.uk/">pld.chadwyck.co.uk</a> <span class="url">(https://pld.chadwyck.co.uk/)</span></div>
+
+<div class="e"><strong>Perseus Digital Library</strong> (Tufts University). <span class="badge oa">OA</span><br>
+<a href="http://www.perseus.tufts.edu/">perseus.tufts.edu</a> <span class="url">(http://www.perseus.tufts.edu/)</span><br>
+<span class="note">Inclui autores latinos clássicos, tardia Antiguidade e alguns textos medievais com ferramentas morfológicas.</span></div>
+</section>
+
+<!-- ==================== VII — REPERTÓRIOS ==================== -->
+<section class="sec" id="s7">
+<div class="sec-hdr"><span class="sec-n">VII.</span><span class="sec-t">Repertórios de Autores e Textos Latinos Medievais</span></div>
+
+<div class="sub" id="s7a"><div class="sub-t">VII.1. Repertórios Gerais</div>
+
+<div class="e"><strong>BISLAM — Bibliotheca Scriptorum Latinorum Medii Recentiorisque Aevi</strong>, ed. R. Gamberini, vol. 1 (Firenze: SISMEL, 2003). <span class="badge db">MIRABILE</span><br>
+<a href="https://www.mirabileweb.it/">mirabileweb.it — BISLAM</a> <span class="url">(https://www.mirabileweb.it/)</span><br>
+<span class="note">Listagem completa de todos os autores latinos medievais com formas normalizadas e variantes; indexa <em>Medioevo Latino</em> 1–21.</span></div>
+
+<div class="e"><strong>CALMA — Compendium Auctorum Latinorum Medii Aevi (500–1500)</strong>, ed. Michael Lapidge et al. (Firenze: SISMEL, 2000– ). <span class="badge db">MIRABILE</span><br>
+<a href="https://www.mirabileweb.it/">mirabileweb.it — CALMA</a> <span class="url">(https://www.mirabileweb.it/)</span><br>
+<span class="note">Substituirá progressivamente CALMA impresso; em curso até H na edição de 2016.</span></div>
+
+<div class="e"><strong>Fabricius, Johann Albert</strong>, <em>Bibliotheca Latina Mediae et Infimae Aetatis</em>, 6 vols. (Hamburgo, 1734–46; ed. Mansi, Florença, 1858–59). <a href="https://www.worldcat.org/oclc/4810380">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/4810380)</span></div>
+
+<div class="e"><strong>Gröber, Gustav</strong>, "Uebersicht über die lateinische Literatur von der Mitte des 6. Jahrhunderts bis 1350", in <em>Grundriss der romanischen Philologie</em>, II/1 (Estrasburgo: Trübner, 1902), pp. 97–432.<br>
+<span class="note">Inventário sistemático do corpus; útil para fins taxonómicos.</span></div>
+
+<div class="e"><strong>Trithemius, Johannes</strong>, <em>De Scriptoribus Ecclesiasticis</em> (Basileia, 1494). <span class="badge oa">OA (edições digitalizadas)</span></div>
+
+<div class="e"><strong>Walther, Hans</strong>, <em>Initia carminum ac versuum Medii Aevi posterioris Latinorum</em>, 2.ª ed. (Göttingen: Vandenhoeck &amp; Ruprecht, 1969). <a href="https://www.worldcat.org/oclc/1021793">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/1021793)</span></div>
+
+<div class="e"><strong>Walther, Hans</strong>, <em>Proverbia sententiaeque Latinitatis Medii Aevi</em>, 9 vols. (Göttingen: Vandenhoeck &amp; Ruprecht, 1963–86). <a href="https://www.worldcat.org/oclc/640218">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/640218)</span></div>
+</div>
+
+<div class="sub" id="s7b"><div class="sub-t">VII.2. Repertórios Regionais e Nacionais</div>
+
+<div class="sub2"><div class="sub2-t">Ilhas Britânicas (Inglaterra, País de Gales, Escócia, Irlanda)</div>
+<div class="e"><strong>Bolton, Whitney F.</strong>, <em>A History of Anglo-Latin Literature, 597–1066</em>, vol. I: <em>597–740</em> (Princeton, 1967). <a href="https://www.worldcat.org/oclc/299834">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/299834)</span></div>
+<div class="e"><strong>Kenney, James F.</strong>, <em>The Sources for the Early History of Ireland: Ecclesiastical</em>, reimp. com adendas de Ludwig Bieler (Nova Iorque: Octagon Books, 1966). <a href="https://www.worldcat.org/oclc/523213">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/523213)</span></div>
+<div class="e"><strong>Lapidge, Michael</strong>, <em>Anglo-Latin Literature, 600–899</em> (Londres: Hambledon Press, 1996). <a href="https://www.worldcat.org/oclc/33103777">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/33103777)</span></div>
+<div class="e"><strong>Lapidge, Michael</strong>, <em>Anglo-Latin Literature, 900–1066</em> (Londres: Hambledon Press, 1993). <a href="https://www.worldcat.org/oclc/27768498">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/27768498)</span></div>
+<div class="e"><strong>Lapidge, Michael &amp; Sharpe, Richard</strong>, <em>A Bibliography of Celtic-Latin Literature 400–1200</em> (Dublin: Royal Irish Academy, 1985). <a href="https://www.worldcat.org/oclc/14262890">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/14262890)</span></div>
+<div class="e"><strong>Ó Corráin, Donnchadh</strong>, <em>Clavis Litterarum Hibernensium: Medieval Irish Books and Texts (c. 400–c. 1600)</em>, <em>Corpus Christianorum Claves</em>, 3 vols. (Turnhout: Brepols, 2017). <a href="https://www.worldcat.org/oclc/993748628">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/993748628)</span></div>
+<div class="e"><strong>Rigg, Arthur George</strong>, <em>A History of Anglo-Latin Literature 1066–1422</em> (Cambridge: Cambridge University Press, 1992). <a href="https://www.worldcat.org/oclc/24207044">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/24207044)</span></div>
+<div class="e"><strong>Sharpe, Richard</strong>, <em>A Handlist of the Latin Writers of Great Britain and Ireland before 1540</em>, <em>Publications of the Journal of Medieval Latin</em> 1 (Turnhout: Brepols, 1997; adendas 2001). <a href="https://www.worldcat.org/oclc/37994920">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/37994920)</span></div>
+</div>
+
+<div class="sub2"><div class="sub2-t">Finlândia</div>
+<div class="e"><strong>Heikkinen, Seppo &amp; Leskinen, Heikki</strong> (eds.), <em>Latinska skrifter från det medeltida Finland</em> / <em>Latin Texts of Medieval Finland</em> (Helsinque, 1987).</div>
+</div>
+
+<div class="sub2"><div class="sub2-t">França</div>
+<div class="e"><strong>Genet, Jean-Philippe</strong>, <em>Dictionnaire des auteurs anglais: auteurs actifs dans les champs de l'histoire et de la politique en Angleterre de 1300–1600</em>. <span class="note">Inclui autores com actividade na esfera francesa.</span></div>
+<div class="e"><strong>Histoire littéraire de la France</strong> (Paris: Académie des Inscriptions et Belles-Lettres / De Boccard, 1733– ; 46 vols. pub.). <span class="badge oa">OA parcial (Gallica)</span><br>
+<a href="https://gallica.bnf.fr/html/und/livres/histoire-litteraire-de-la-france">Gallica BnF</a> <span class="url">(https://gallica.bnf.fr/html/und/livres/histoire-litteraire-de-la-france)</span></div>
+</div>
+
+<div class="sub2"><div class="sub2-t">Alemanha, Áustria e Suíça</div>
+<div class="e"><strong>Langosch, Karl</strong>, <em>Die deutsche Literatur des lateinischen Mittelalters in ihrer geschichtlichen Entwicklung</em> (Berlim: De Gruyter, 1964). <a href="https://www.worldcat.org/oclc/1063453">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/1063453)</span></div>
+<div class="e"><strong>Wattenbach, Wilhelm; Holtzmann, Robert &amp; Schmale, Franz-Josef</strong>, <em>Deutschlands Geschichtsquellen im Mittelalter. Vorzeit und Karolinger</em> (Weimar: Böhlau, 1952–63). <a href="https://www.worldcat.org/oclc/2288218">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/2288218)</span></div>
+</div>
+
+<div class="sub2"><div class="sub2-t">Península Ibérica</div>
+<div class="e"><strong>Díaz y Díaz, Manuel Cecilio</strong>, <em>Index scriptorum Latinorum Medii Aevi Hispanorum</em>, 2 vols. (Salamanca: CSIC, 1958–59). <a href="https://www.worldcat.org/oclc/2688791">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/2688791)</span></div>
+<div class="e"><strong>Díaz y Díaz, Manuel Cecilio</strong>, <em>De Isidoro al siglo XI. Ocho estudios sobre la vida literaria peninsular</em> (Barcelona: El Albir, 1976). <a href="https://www.worldcat.org/oclc/2813059">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/2813059)</span></div>
+</div>
+
+<div class="sub2"><div class="sub2-t">Itália</div>
+<div class="e"><strong>Bertini, Ferruccio</strong> (coord.), <em>Letteratura latina medievale in Italia</em> (Gênova, 1988). <a href="https://www.worldcat.org/oclc/20094673">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/20094673)</span></div>
+</div>
+
+<div class="sub2"><div class="sub2-t">Países Baixos e Baixa Lotaríngia</div>
+<div class="e"><strong>Manitius, Max</strong>, entries in <em>Geschichte der lateinischen Literatur des Mittelalters</em> [ver secção IX] para os autores neerlandeses.</div>
+</div>
+
+<div class="sub2"><div class="sub2-t">Escandinávia</div>
+<div class="e"><strong>Lehmann, Paul</strong>, <em>Skandinaviens Anteil an der lateinischen Literatur und Wissenschaft des Mittelalters</em>, 2 vols. (<em>SBBayer. Ak.</em>, 1936–37). <a href="https://www.worldcat.org/oclc/14826975">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/14826975)</span></div>
+</div>
+
+<div class="sub2"><div class="sub2-t">Regiões Eslavas</div>
+<div class="e"><strong>Nechutová, Jana</strong>, <em>Die lateinische Literatur des Mittelalters in Böhmen</em> (Colónia: Böhlau, 2007). [ver secção I]</div>
+</div>
+</div>
+
+<div class="sub" id="s7c"><div class="sub-t">VII.3. Repertórios Temáticos (Ordens Religiosas, Escritoras, Inícios)</div>
+
+<div class="e"><strong>Bloomfield, Morton W.</strong> et al., <em>Incipits of Latin Works on the Virtues and Vices, 1100–1500 A.D.</em> (Cambridge, MA: Medieval Academy of America, 1979). <a href="https://www.worldcat.org/oclc/4831745">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/4831745)</span></div>
+
+<div class="e"><strong>Dronke, Peter</strong>, <em>Women Writers of the Middle Ages: A Critical Study of Texts from Perpetua (†203) to Marguerite Porete (†1310)</em> (Cambridge: Cambridge University Press, 1984). <a href="https://www.worldcat.org/oclc/9970234">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/9970234)</span></div>
+
+<div class="e"><strong>Glorieux, Palémon</strong>, <em>Répertoire des maîtres en théologie de Paris au XIIIe siècle</em>, 2 vols. (Paris: Vrin, 1933–34). <a href="https://www.worldcat.org/oclc/3068218">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/3068218)</span></div>
+
+<div class="e"><strong>Kéry, Lotte</strong>, <em>Canonical Collections of the Early Middle Ages (ca. 400–1140)</em> (Washington: Catholic University of America Press, 1999). <a href="https://www.worldcat.org/oclc/40747084">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/40747084)</span></div>
+
+<div class="e"><strong>Schneyer, Johannes Baptist</strong>, <em>Repertorium der lateinischen Sermones des Mittelalters für die Zeit von 1150–1350</em>, <em>Beiträge zur Geschichte der Philosophie und Theologie des Mittelalters</em> 43, 11 vols. (Münster: Aschendorff, 1969–90). <a href="https://www.worldcat.org/oclc/2244049">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/2244049)</span></div>
+
+<div class="e"><strong>Stegmüller, Friedrich</strong>, <em>Repertorium Biblicum Medii Aevi</em>, 11 vols. (Madrid: CSIC, 1950–80). <a href="https://www.worldcat.org/oclc/1638847">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/1638847)</span></div>
+
+<div class="e"><strong>Stegmüller, Friedrich</strong>, <em>Repertorium commentariorum in Sententias Petri Lombardi</em>, 2 vols. (Würzburg, 1947). <a href="https://www.worldcat.org/oclc/4430219">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/4430219)</span></div>
+
+<div class="e"><strong>Stevenson, Jane</strong>, <em>Women Latin Poets: Language, Gender, and Authority, from Antiquity to the Eighteenth Century</em> (Oxford: Oxford University Press, 2005). <a href="https://www.worldcat.org/oclc/60832069">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/60832069)</span></div>
+
+<div class="e"><strong>Thorndike, Lynn &amp; Kibre, Pearl</strong>, <em>A Catalogue of Incipits of Mediaeval Scientific Writings in Latin</em>, rev. ed. (Cambridge, MA: Medieval Academy of America, 1963). <a href="https://www.worldcat.org/oclc/1098143">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/1098143)</span></div>
+</div>
+</section>
+
+<!-- ==================== VIII — ENCICLOPÉDIAS ==================== -->
+<section class="sec" id="s8">
+<div class="sec-hdr"><span class="sec-n">VIII.</span><span class="sec-t">Enciclopédias e Obras de Referência Gerais</span></div>
+
+<div class="e"><strong>Amsler, Mark</strong>, <em>Etymology and Grammatical Discourse in Late Antiquity and the Early Middle Ages</em>, <em>Amsterdam Studies in the Theory and History of Linguistic Science</em> III/44 (Amsterdam: Benjamins, 1989). <a href="https://www.worldcat.org/oclc/713025895">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/713025895)</span></div>
+
+<div class="e"><strong>CIVICIMA: Études sur le vocabulaire intellectuel du Moyen Âge</strong>, dir. Olga Weijers (Turnhout: Brepols, 1988– ). <span class="badge sub-badge">Série Brepols</span><br>
+<a href="http://www.brepols.net/Pages/BrowseBySeries.aspx?TreeSeries=CIVI">brepols.net — CIVI</a> <span class="url">(http://www.brepols.net/Pages/BrowseBySeries.aspx?TreeSeries=CIVI)</span><br>
+<span class="note">Série dedicada ao vocabulário das instituições medievais de ensino e comunicação intelectual.</span></div>
+
+<div class="e"><strong>Curtius, Ernst Robert</strong>, <em>Europäische Literatur und lateinisches Mittelalter</em> (Berna: Francke, 1948); trad. inglesa: <em>European Literature and the Latin Middle Ages</em>, trad. W. R. Trask, <em>Bollingen Series</em> 36 (Princeton, 1953; reimp. 1990). <a href="https://www.worldcat.org/oclc/328540">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/328540)</span><br>
+<span class="note">Obra de leitura obrigatória; disponível em tradução portuguesa, espanhola, francesa, italiana. Ver especialmente o apêndice sobre etimologia medieval.</span></div>
+
+<div class="e"><strong><em>Dictionnaire des Lettres Françaises: Le Moyen Âge</em></strong>, dir. Robert Bossuat et al., ed. rev. Geneviève Hasenohr &amp; Michel Zink (Paris: Fayard, 1992). <a href="https://www.worldcat.org/oclc/28252286">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/28252286)</span></div>
+
+<div class="e"><strong>Klink, Roswitha</strong>, <em>Die lateinische Etymologie des Mittelalters</em>, <em>Medium Ævum</em> 17 (Munique: Fink, 1970). <a href="https://www.worldcat.org/oclc/32105865">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/32105865)</span></div>
+
+<div class="e"><strong><em>Lexikon des Mittelalters</em></strong>, 10 vols. (Munique / Zurique: Artemis, 1977–99; reimp. Stuttgart: Metzler, 1999). <span class="badge sub-badge">Assinatura (online)</span><br>
+<a href="https://about.brepolis.net/lexikon-des-mittelalters/">about.brepolis.net — LexMa</a> <span class="url">(https://about.brepolis.net/lexikon-des-mittelalters/)</span></div>
+
+<div class="e"><strong>Maltby, Robert</strong>, <em>A Lexicon of Ancient Latin Etymologies</em>, <em>ARCA</em> 25 (Leeds: Cairns, 1991). <a href="https://www.worldcat.org/oclc/22732675">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/22732675)</span></div>
+
+<div class="e"><strong>Opelt, Ilona</strong>, "Etymologie", in <em>Reallexikon für Antike und Christentum</em>, vol. VI (Stuttgart: Hiersemann, 1966), cols. 797–844. <a href="https://www.worldcat.org/oclc/870527338">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/870527338)</span></div>
+
+<div class="e"><strong>Pöschl, Viktor</strong> et al., <em>Bibliographie zur antiken Bildersprache</em> (Heidelberg: Winter, 1964). <a href="https://www.worldcat.org/oclc/968487">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/968487)</span></div>
+
+<div class="e"><strong><em>Reallexikon für Antike und Christentum (RAC)</em></strong> (Stuttgart: Hiersemann, 1950– ). <span class="badge sub-badge">Impressa</span></div>
+
+<div class="e"><strong>Verbum et Signum: Beiträge zur mediävistischen Bedeutungsforschung</strong>, ed. Hans Fromm et al. (FS Friedrich Ohly), 2 vols. (Munique: Fink, 1975). <a href="https://www.worldcat.org/oclc/2293390">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/2293390)</span><br>
+<span class="note">Inclui estudos fundamentais de Grubmüller, Haubrichs, Schleusener-Eichholz, Ruberg, Sanders sobre etimologia medieval.</span></div>
+
+<div class="e"><strong>Weijers, Olga</strong>, <em>Le travail intellectuel à la Faculté des arts de Paris: textes et maîtres (ca. 1200–1500)</em>, múltiplos vols. (Turnhout: Brepols, 1994– ).</div>
+
+<div class="e"><strong>Wutz, Franz</strong>, <em>Onomastica sacra: Untersuchungen zum Liber interpretationis nominum Hebraicarum des hl. Hieronymus</em>, <em>TU</em> 41 (Leipzig, 1914–15). <a href="https://www.worldcat.org/oclc/1127389">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/1127389)</span></div>
+</section>
+
+<!-- ==================== IX — HISTÓRIAS ==================== -->
+<section class="sec" id="s9">
+<div class="sec-hdr"><span class="sec-n">IX.</span><span class="sec-t">Histórias Gerais da Literatura Latina Medieval</span></div>
+
+<div class="e"><strong>Brunhölzl, Franz</strong>, <em>Geschichte der lateinischen Literatur des Mittelalters</em>, 2 vols. (Munique: Fink, 1975–92). <a href="https://www.worldcat.org/oclc/1782082">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/1782082)</span><br>
+<span class="note">Nova história padrão até meados do séc. XI; organizada por regiões e períodos com valiosos apêndices bibliográficos.</span></div>
+
+<div class="e"><strong>Cavallo, Guglielmo; Leonardi, Claudio &amp; Menestò, Enrico</strong> (dirs.), <em>Lo spazio letterario del Medioevo. 1. Il Medioevo latino</em>, 5 vols. (Roma: Salerno, 1992–98). <a href="https://www.worldcat.org/oclc/28891124">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/28891124)</span></div>
+
+<div class="e"><strong>De Ghellinck, Joseph</strong>, <em>L'Essor de la littérature latine au XIIe siècle</em>, 2 vols., <em>Museum Lessianum</em> 4 (Bruxelas: Édition Universelle, 1946). <a href="https://www.worldcat.org/oclc/1481553">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/1481553)</span></div>
+
+<div class="e"><strong>De Ghellinck, Joseph</strong>, <em>Littérature latine au Moyen Âge</em>, 2 vols. (Paris: Bloud &amp; Gay, 1939). <a href="https://www.worldcat.org/oclc/464225">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/464225)</span></div>
+
+<div class="e"><strong>Godman, Peter</strong>, <em>Poetry of the Carolingian Renaissance</em> (Londres: Duckworth, 1985). <a href="https://www.worldcat.org/oclc/11781785">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/11781785)</span><br>
+<span class="note">Textos em página dupla com tradução inglesa; introdução excelente à poesia carolíngia.</span></div>
+
+<div class="e"><strong>Manitius, Max</strong>, <em>Geschichte der lateinischen Literatur des Mittelalters</em>, 3 vols., <em>Handbuch der Altertumswissenschaft</em> 9/2 (Munique: Beck, 1911–31). <span class="badge oa">OA online</span><br>
+<a href="https://www.worldcat.org/oclc/2413025">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/2413025)</span><br>
+<span class="note">Obra monumental ainda insubstituível para a identificação das fontes, influências e <em>Nachleben</em>; cobre até ao séc. XI.</span></div>
+
+<div class="e"><strong>Raby, F. J. E.</strong>, <em>A History of Christian-Latin Poetry from the Beginnings to the Close of the Middle Ages</em>, 2.ª ed. (Oxford: Clarendon Press, 1953). <a href="https://www.worldcat.org/oclc/310498">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/310498)</span></div>
+
+<div class="e"><strong>Raby, F. J. E.</strong>, <em>A History of Secular Latin Poetry in the Middle Ages</em>, 2.ª ed., 2 vols. (Oxford: Clarendon Press, 1957). <a href="https://www.worldcat.org/oclc/310497">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/310497)</span></div>
+
+<div class="e"><strong>Raby, F. J. E.</strong> (ed.), <em>The Oxford Book of Medieval Latin Verse</em> (Oxford: Oxford University Press, 1959). <a href="https://www.worldcat.org/oclc/310499">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/310499)</span></div>
+
+<div class="e"><strong>Szövérffy, Joseph</strong>, <em>Weltliche Dichtungen des lateinischen Mittelalters: Ein Handbuch</em>, I: <em>Von den Anfängen bis zum Ende der Karolingerzeit</em> (Berlim: Erich Schmidt, 1970). <a href="https://www.worldcat.org/oclc/249282">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/249282)</span></div>
+
+<div class="e"><strong>Szövérffy, Joseph</strong>, <em>Secular Latin Lyrics and Minor Poetic Forms of the Middle Ages from the Tenth to the Fifteenth Century: A Historical Survey and Literary Repertory</em>, 3 vols. (Concord, NH: Classical Folia Editions, 1992–94). <a href="https://www.worldcat.org/oclc/26798831">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/26798831)</span></div>
+</section>
+
+<!-- ==================== X — GÉNEROS (seguindo o esquema do Medioevo Latino) ==================== -->
+<section class="sec" id="s10">
+<div class="sec-hdr"><span class="sec-n">X.</span><span class="sec-t">Géneros e Formas Literárias — segundo o esquema do <em>Medioevo Latino</em></span></div>
+
+<div class="notebox">A organização desta secção segue a estrutura temática do <em>Medioevo Latino. Bollettino bibliografico della cultura europea da Boezio a Erasmo</em> (SISMEL, 1980– ), dividida em cinco grandes grupos: <strong>A. Disciplinas</strong> · <strong>B. Filologia e Literatura</strong> · <strong>C. Formas e Géneros de Textos</strong> · <strong>D. Instituições</strong> · <strong>E. História da Cultura e Espiritualidade</strong>, com um apêndice de <strong>F. Ciências Auxiliares da História</strong>.</div>
+
+<!-- A. DISCIPLINAS -->
+<div class="sub" id="s10-disc"><div class="sub-t">A. Disciplinas</div>
+
+<div class="sub2" id="s10-artes"><div class="sub2-t">A.1. Artes Liberais (Grammatica · Dialectica · Rhetorica · Geometria · Arithmetica · Astronomia · Musica)</div>
+
+<div class="e"><strong>Law, Vivien A.</strong>, <em>Grammar and Grammarians in the Early Middle Ages</em> (Harlow: Longman, 1997). <a href="https://www.worldcat.org/oclc/37232547">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/37232547)</span></div>
+
+<div class="e"><strong>Law, Vivien A.</strong>, <em>The History of Linguistics in Europe from Plato to 1600</em> (Cambridge: Cambridge University Press, 2003). <a href="https://www.worldcat.org/oclc/50643399">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/50643399)</span></div>
+
+<div class="e"><strong>Murphy, James J.</strong>, <em>Rhetoric in the Middle Ages: A History of Rhetorical Theory from Saint Augustine to the Renaissance</em> (Berkeley: University of California Press, 1974). <a href="https://www.worldcat.org/oclc/870408">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/870408)</span></div>
+
+<div class="e"><strong>Phillips, Nancy</strong>, "Music", in Mantello &amp; Rigg, <em>Medieval Latin</em> (1996), pp. 296–306. [ver secção I]</div>
+
+<div class="e"><strong>Wagner, David L.</strong> (ed.), <em>The Seven Liberal Arts in the Middle Ages</em> (Bloomington: Indiana University Press, 1983). <a href="https://www.worldcat.org/oclc/9259219">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/9259219)</span></div>
+</div>
+
+<div class="sub2"><div class="sub2-t">A.2. Artes Mecânicas · Computo e Calendários</div>
+<div class="e"><strong>Wallis, Faith</strong>, "Science: Introduction", in Mantello &amp; Rigg, <em>Medieval Latin</em> (1996), pp. 342–348. [ver secção I]</div>
+</div>
+
+<div class="sub2" id="s10-fil"><div class="sub2-t">A.3. Filosofia e Teologia · Lógica Escolástica</div>
+
+<div class="e"><strong>De Libera, Alain</strong>, <em>La Philosophie médiévale</em> (Paris: PUF, 1989; reed. 1993). <a href="https://www.worldcat.org/oclc/20869527">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/20869527)</span></div>
+
+<div class="e"><strong>Glorieux, Palémon</strong>, <em>Répertoire des maîtres en théologie de Paris au XIIIe siècle</em>, 2 vols. (Paris: Vrin, 1933–34). <a href="https://www.worldcat.org/oclc/3068218">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/3068218)</span></div>
+
+<div class="e"><strong>Stegmüller, Friedrich</strong>, <em>Repertorium commentariorum in Sententias Petri Lombardi</em>, 2 vols. (Würzburg, 1947). <a href="https://www.worldcat.org/oclc/4430219">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/4430219)</span></div>
+
+<div class="e"><strong>Weijers, Olga</strong>, <em>Le travail intellectuel à la Faculté des arts de Paris: textes et maîtres (ca. 1200–1500)</em>, múltiplos vols. (Turnhout: Brepols, 1994– ). [ver secção VIII]</div>
+
+<div class="e"><strong><em>Documenti e Studi sulla Tradizione Filosofica Medievale</em></strong> (SISMEL, 1990– ). <span class="badge db">MIRABILE</span><br>
+<a href="https://www.mirabileweb.it/">mirabileweb.it — DS</a> <span class="url">(https://www.mirabileweb.it/)</span></div>
+</div>
+
+<div class="sub2" id="s10-sci"><div class="sub2-t">A.4. Ciências Naturais · Medicina · Alquimia · Astrologia · Magia · Perspectiva</div>
+
+<div class="e"><strong>Grant, Edward</strong>, <em>A Source Book in Medieval Science</em> (Cambridge, MA: Harvard University Press, 1974). <a href="https://www.worldcat.org/oclc/1030100">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/1030100)</span></div>
+
+<div class="e"><strong>Lawn, Brian</strong>, <em>The Salernitan Questions</em> (Oxford: Clarendon Press, 1963). <a href="https://www.worldcat.org/oclc/869521">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/869521)</span></div>
+
+<div class="e"><strong><em>Micrologus. Natura, scienze e società medievali</em></strong> (SISMEL, 1993– ). <span class="badge db">MIRABILE</span><br>
+<a href="https://www.mirabileweb.it/">mirabileweb.it — Micrologus</a> <span class="url">(https://www.mirabileweb.it/)</span></div>
+
+<div class="e"><strong>Thorndike, Lynn &amp; Kibre, Pearl</strong>, <em>A Catalogue of Incipits of Mediaeval Scientific Writings in Latin</em>, rev. ed. (Cambridge, MA: Medieval Academy of America, 1963). <a href="https://www.worldcat.org/oclc/1098143">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/1098143)</span></div>
+</div>
+</div>
+
+<!-- B. FILOLOGIA E LITERATURA -->
+<div class="sub" id="s10-philol"><div class="sub-t">B. Filologia e Literatura</div>
+
+<div class="sub2" id="s10-lexico"><div class="sub2-t">B.1. Filologia e História do Texto · Lexicografia · Linguística · Onomástica</div>
+
+<div class="e"><strong>Sieben, Hermann Josef</strong>, <em>Voces: Eine Bibliographie zu Wörtern und Begriffen aus der Patristik (1918–1978)</em> (Berlim: De Gruyter, 1980). <a href="https://www.worldcat.org/oclc/6787207">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/6787207)</span></div>
+
+<div class="e"><strong>Weijers, Olga</strong>, <em>Dictionnaires et répertoires au Moyen Âge: une étude du vocabulaire</em> (Turnhout: Brepols, 1991). <a href="https://www.worldcat.org/oclc/24523610">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/24523610)</span></div>
+
+<div class="e"><strong>Wutz, Franz</strong>, <em>Onomastica sacra</em> (Leipzig, 1914–15). [ver secção VIII]</div>
+
+<div class="e"><span class="note">→ Para léxicos e dicionários ver secção V; para a lexicografia latina cristã, ver também secção IV.2.</span></div>
+</div>
+
+<div class="sub2" id="s10-poesia"><div class="sub2-t">B.2. Poesia (História e Repertórios)</div>
+
+<div class="e"><strong>Díaz de Bustamante, José M. &amp; Díaz y Díaz, Manuel Cecilio</strong> (eds.), <em>Poesía latina medieval (siglos V–XV): Actas del IV Congreso del «Internationales Mittellateinerkomitee»</em>, <em>Millennio medievale</em> 55 (Firenze: SISMEL, 2005).</div>
+
+<div class="e"><strong>Dronke, Peter</strong>, <em>Medieval Latin and the Rise of the European Love Lyric</em>, 2 vols. (Oxford: Clarendon Press, 1965–66; 2.ª ed. 1968). <a href="https://www.worldcat.org/oclc/221220">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/221220)</span></div>
+
+<div class="e"><strong>Dronke, Peter</strong>, <em>The Medieval Lyric</em>, 3.ª ed. (Woodbridge: Boydell &amp; Brewer, 1996). <a href="https://www.worldcat.org/oclc/34578855">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/34578855)</span></div>
+
+<div class="e"><strong>Dronke, Peter</strong>, <em>Poetic Individuality in the Middle Ages</em>, 2.ª ed. (Londres, 1986). <a href="https://www.worldcat.org/oclc/16283285">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/16283285)</span></div>
+
+<div class="e"><strong>Godman, Peter</strong>, <em>Poetry of the Carolingian Renaissance</em> (Londres: Duckworth, 1985). <a href="https://www.worldcat.org/oclc/11781785">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/11781785)</span></div>
+
+<div class="e"><strong>Langosch, Karl</strong> (dir.), <em>Mittellateinische Dichtung</em>, <em>Wege der Forschung</em> 149 (Darmstadt: WBG, 1969). <a href="https://www.worldcat.org/oclc/71461">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/71461)</span></div>
+
+<div class="e"><strong>Manitius, Max</strong>, <em>Geschichte der christlich-lateinischen Poesie</em> (Stuttgart: Cotta, 1891). [ver secção IV.1]</div>
+
+<div class="e"><strong>Raby, F. J. E.</strong>, <em>A History of Christian-Latin Poetry</em>, 2.ª ed. (Oxford, 1953). [ver secção IX]</div>
+
+<div class="e"><strong>Raby, F. J. E.</strong>, <em>A History of Secular Latin Poetry</em>, 2.ª ed., 2 vols. (Oxford, 1957). [ver secção IX]</div>
+
+<div class="e"><strong>Raby, F. J. E.</strong> (ed.), <em>The Oxford Book of Medieval Latin Verse</em> (Oxford, 1959). [ver secção IX]</div>
+
+<div class="e"><strong>Szövérffy, Joseph</strong>, <em>Weltliche Dichtungen des lateinischen Mittelalters</em>, I (Berlim, 1970). [ver secção IX]</div>
+
+<div class="e"><strong>Szövérffy, Joseph</strong>, <em>Secular Latin Lyrics […]</em>, 3 vols. (Concord, NH, 1992–94). [ver secção IX]</div>
+
+<div class="e"><strong>Vollmann, Benedikt K.</strong> (ed.), <em>Carmina Burana</em>, <em>Bibliothek des Mittelalters</em> 13 (Frankfurt: Dt. Klassiker Verlag, 1987). <a href="https://www.worldcat.org/oclc/16823765">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/16823765)</span></div>
+
+<div class="e"><strong>Waddell, Helen</strong>, <em>The Wandering Scholars</em> (Londres: Constable, 1927). <a href="https://www.worldcat.org/oclc/185474">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/185474)</span></div>
+
+<div class="e"><strong>Walsh, Patrick G.</strong>, <em>Love Lyrics from the Carmina Burana</em> (Chapel Hill, 1993). <a href="https://www.worldcat.org/oclc/27034282">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/27034282)</span></div>
+
+<div class="e"><strong>Walther, Hans</strong>, <em>Initia carminum ac versuum Medii Aevi posterioris Latinorum</em>, 2.ª ed. (Göttingen, 1969). [ver secção VII.1]</div>
+</div>
+
+<div class="sub2" id="s10-versif"><div class="sub2-t">B.3. Versificação e Prosa Rítmica</div>
+
+<div class="e"><strong>Klopsch, Paul</strong>, <em>Einführung in die Dichtungslehre des lateinischen Mittelalters</em> (Darmstadt: WBG, 1980). <a href="https://www.worldcat.org/oclc/6889618">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/6889618)</span></div>
+
+<div class="e"><strong>Norberg, Dag</strong>, <em>Introduction à l'étude de la versification latine médiévale</em> (Stockholm, 1958). <a href="https://www.worldcat.org/oclc/1108046">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/1108046)</span></div>
+
+<div class="e"><strong>Norberg, Dag</strong>, <em>An Introduction to the Study of Medieval Latin Versification</em>, trad. G. C. Roti &amp; J. de La Chapelle Skubly (Washington, D.C.: CUAP, 2004). <a href="https://www.worldcat.org/oclc/53920624">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/53920624)</span></div>
+
+<div class="e"><strong>Norberg, Dag</strong>, <em>La poésie latine rythmique du haut Moyen Âge</em> (Stockholm, 1954). <a href="https://www.worldcat.org/oclc/2519066">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/2519066)</span></div>
+</div>
+
+<div class="sub2" id="s10-trad"><div class="sub2-t">B.4. Tradução · História da Literatura</div>
+
+<div class="e"><strong>Farrar, Clarissa P. &amp; Evans, Austin P.</strong>, <em>Bibliography of English Translations from Medieval Sources</em>, <em>Records of Civilization</em> 39 (Nova Iorque: Columbia University Press, 1946). <a href="https://www.worldcat.org/oclc/256636">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/256636)</span></div>
+
+<div class="e"><strong>Ferguson, Mary Anne Heyward</strong>, <em>Bibliography of English Translations from Medieval Sources, 1943–1967</em>, <em>Records of Civilization</em> 88 (Nova Iorque: Columbia University Press, 1974). <a href="https://www.worldcat.org/oclc/928609">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/928609)</span></div>
+</div>
+</div>
+
+<!-- C. FORMAS E GÉNEROS DE TEXTOS -->
+<div class="sub" id="s10-genres"><div class="sub-t">C. Formas e Géneros de Textos</div>
+
+<div class="sub2" id="s10-agio"><div class="sub2-t">C.1. Hagiografia (Martyrologia · Vitae · Milagres · Translações)</div>
+
+<!-- INSTRUMENTOS DE REFERÊNCIA -->
+<div class="sub2-t" style="font-style:normal;color:var(--blue);font-size:.88rem;margin:.6rem 0 .3rem .3rem;border:none;padding:0">▸ Instrumentos de referência</div>
+
+<div class="e"><strong>Acta Sanctorum (AASS)</strong>, 67 vols. (Antuérpia / Bruxelas: Société des Bollandistes, 1643–1940). <span class="badge sub-badge">Assinatura</span><br>
+<a href="https://acta.chadwyck.com/">acta.chadwyck.com</a> <span class="url">(https://acta.chadwyck.com/)</span></div>
+
+<div class="e"><strong>Bibliotheca Hagiographica Latina antiquae et mediae aetatis (BHL)</strong>, ed. Bollandistas (Bruxelas, 1898–1911; Supplementi editio altera auctior, 1986; Novum Supplementum, ed. Henricus Fros, 1986), 4 vols. <span class="badge oa">via Clavis Clavium</span><br>
+<a href="https://clavis.brepols.net/clacla">clavis.brepols.net/clacla</a> <span class="url">(https://clavis.brepols.net/clacla)</span></div>
+
+<div class="e"><strong>Bibliotheca Sanctorum</strong>, 13 vols. (Roma: Istituto Giovanni XXIII della Pontificia Università Lateranense, 1961–70). <a href="https://www.worldcat.org/oclc/643817">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/643817)</span></div>
+
+<div class="e"><strong>Chevalier, Ulysse</strong>, <em>Repertorium Hymnologicum</em>, 6 vols., <em>Subsidia Hagiographica</em> 1–6 (Lovaina / Bruxelas, 1892–1921). <a href="https://www.worldcat.org/oclc/7447786">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/7447786)</span></div>
+
+<div class="e"><strong>Delehaye, Hippolyte</strong> (S.J.) et al. (eds.), <em>Martyrologium Romanum ad formam editionis typicae scholiis historicis instructum</em> (Bruxelas: Société des Bollandistes, 1940). <a href="https://www.worldcat.org/oclc/5798386">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/5798386)</span></div>
+
+<div class="e"><strong><em>Hagiographica. Rivista di agiografia e biografia della Società Internazionale per lo Studio del Medioevo Latino</em></strong> (Firenze: SISMEL, 1994– ). <span class="badge db">MIRABILE</span><br>
+<a href="https://www.mirabileweb.it/">mirabileweb.it — Hagiographica</a> <span class="url">(https://www.mirabileweb.it/)</span></div>
+
+<div class="e"><strong>Poncelet, A.</strong>, <em>Catalogus codicum hagiographicorum latinorum bibliothecae Vaticanae</em>, <em>Subsidia Hagiographica</em> 10 (Bruxelas: Société des Bollandistes, 1910). <a href="https://www.worldcat.org/oclc/3248219">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/3248219)</span></div>
+
+<div class="e"><strong>Quentin, Henri</strong>, <em>Les Martyrologes historiques du Moyen Âge. Étude sur la formation du martyrologe romain</em>, <em>Études d'histoire des dogmes et d'ancienne littérature ecclésiastique</em> (Paris: Gabalda, 1908). <a href="https://www.worldcat.org/oclc/1026093">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/1026093)</span></div>
+
+<!-- HISTÓRIA E METODOLOGIA DA HAGIOGRAFIA -->
+<div class="sub2-t" style="font-style:normal;color:var(--blue);font-size:.88rem;margin:.8rem 0 .3rem .3rem;border:none;padding:0">▸ História e Metodologia da Hagiografia</div>
+
+<div class="e"><strong>Accademia Nazionale dei Lincei</strong> (ed.), <em>Convegno Internazionale «Agiografia nell'Occidente Cristiano. Secoli XIII–XV» (Roma, 1–2 marzo 1979)</em> (Roma: Accademia Nazionale dei Lincei, 1980). <a href="https://www.worldcat.org/oclc/7748476">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/7748476)</span></div>
+
+<div class="e"><strong>Aigrain, René</strong>, <em>L'Hagiographie. Ses sources, ses méthodes, son histoire</em> (Poitiers, 1953); reimp. com complemento de Robert Godding (Bruxelas: Société des Bollandistes, 2000). <a href="https://www.worldcat.org/oclc/46557268">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/46557268)</span></div>
+
+<div class="e"><strong>Altman, Charles F.</strong>, "Two Types of Opposition and the Structure of Latin Saints' Lives", <em>Medievalia et Humanistica: Studies in Medieval and Renaissance Culture</em> 6 (1975), 1–11.</div>
+
+<div class="e"><strong>Angenendt, Arnold</strong>, "Der Heilige: auf Erde — im Himmel", in Jürgen Petersohn (ed.), <em>Politik und Heiligenverehrung im Hochmittelalter</em> (Sigmaringen: Thorbecke, 1994), pp. 11–52.</div>
+
+<div class="e"><strong>Baños Vallejo, Fernando</strong>, <em>La hagiografía como género literario en la Edad Media</em> (Oviedo: Departamento de Filología Española, 1989). <a href="https://www.worldcat.org/oclc/21606578">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/21606578)</span></div>
+
+<div class="e"><strong>Bekker-Nielsen, H.; Peter, F.; Jorgensen, Jorgen Hojgaard</strong> et al. (eds.), <em>Hagiography and Medieval Literature: A Symposium</em> (Odense: Odense University Press, 1981). <a href="https://www.worldcat.org/oclc/8055543">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/8055543)</span></div>
+
+<div class="e"><strong>Bénédictins de Paris</strong> [Baudot–Chaussin–Dubois] (eds.), <em>Vie des saints et des bienheureux selon l'ordre du calendrier avec l'historique des fêtes</em>, 13 vols. (Paris, 1935–54). <a href="https://www.worldcat.org/oclc/5750028">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/5750028)</span></div>
+
+<div class="e"><strong>Berschin, Walter</strong>, <em>Biographie und Epochenstil im lateinischen Mittelalter</em>, <em>Quellen und Untersuchungen zur lateinischen Philologie des Mittelalters</em> 8–10 (Stuttgart: Hiersemann, 1986– ). <a href="https://www.worldcat.org/oclc/14273869">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/14273869)</span></div>
+
+<div class="e"><strong>Blumenfeld-Kosinski, Renate &amp; Szell, Timea</strong> (eds.), <em>Images of Sainthood in Medieval Europe</em> (Ithaca / Nova Iorque / Londres: Cornell University Press, 1991). <a href="https://www.worldcat.org/oclc/21975891">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/21975891)</span></div>
+
+<div class="e"><strong>Boesch-Gajano, Sofia</strong>, "Uso e abuso del miracolo nella cultura altomedievale", in <em>Les fonctions des saints dans le monde occidental (IIIe–XIIIe siècle)</em> (Roma: École Française de Rome, 1991), pp. 109–122.</div>
+
+<div class="e"><strong>De Gaiffier, Baudouin</strong>, "L'hagiographe et son public au XIe siècle", in <em>Miscellanea Historica in honorem Leonis van der Essen</em> (Bruxelas / Paris, 1947), I, pp. 135–166.</div>
+
+<div class="e"><strong>De Gaiffier, Baudouin</strong>, <em>Études critiques d'hagiographie et d'iconologie</em> (Bruxelas: Société des Bollandistes, 1967). <a href="https://www.worldcat.org/oclc/1498404">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/1498404)</span></div>
+
+<div class="e"><strong>De Gaiffier, Baudouin</strong>, <em>Mentalité de l'hagiographe médiéval d'après quelques travaux récents</em> (Bruxelas: Société des Bollandistes, 1968). <a href="https://www.worldcat.org/oclc/5310553">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/5310553)</span></div>
+
+<div class="e"><strong>De Gaiffier, Baudouin</strong>, "Hagiographie et historiographie. Quelques aspects du problème", in <em>La Storiografia altomedievale</em>, <em>Settimane di Studio del CISAM</em> 17 (Spoleto, 1970), pp. 139–166; reimp. in <em>Recueil d'hagiographie</em> (Bruxelas, 1977), pp. 139–196.</div>
+
+<div class="e"><strong>De Gaiffier, Baudouin</strong>, <em>Recherches d'hagiographie latine</em> (Bruxelas: Société des Bollandistes, 1971). <a href="https://www.worldcat.org/oclc/1498403">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/1498403)</span></div>
+
+<div class="e"><strong>De Gaiffier, Baudouin</strong>, <em>Recueil d'hagiographie</em> (Bruxelas: Société des Bollandistes, 1977). <a href="https://www.worldcat.org/oclc/4486050">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/4486050)</span><br>
+<span class="note">Inclui "Les Bollandistes et les légendes hagiographiques" (pp. 261–271) e outros artigos fundamentais.</span></div>
+
+<div class="e"><strong>Delehaye, Hippolyte</strong> (S.J.), <em>Les Légendes hagiographiques</em>, 2.ª ed. (Bruxelas: Société des Bollandistes, 1906; reed. 1955). <a href="https://www.worldcat.org/oclc/4318050">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/4318050)</span></div>
+
+<div class="e"><strong>Delehaye, Hippolyte</strong> (S.J.), <em>Sanctus. Essai sur le culte des saints dans l'Antiquité</em>, <em>Subsidia Hagiographica</em> 17 (Bruxelas: Société des Bollandistes, 1927). <a href="https://www.worldcat.org/oclc/2260327">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/2260327)</span></div>
+
+<div class="e"><strong>Delehaye, Hippolyte</strong> (S.J.), <em>Les Origines du culte des martyrs</em> (Bruxelas: Société des Bollandistes, 1933). <a href="https://www.worldcat.org/oclc/5375268">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/5375268)</span></div>
+
+<div class="e"><strong>Delehaye, Hippolyte</strong> (S.J.), <em>Cinq leçons sur la méthode hagiographique</em>, <em>Subsidia Hagiographica</em> 21 (Bruxelas: Société des Bollandistes, 1934). <a href="https://www.worldcat.org/oclc/8225699">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/8225699)</span></div>
+
+<div class="e"><strong>Delehaye, Hippolyte</strong> (S.J.), <em>Les Passions des martyrs et les genres littéraires</em>, <em>Subsidia Hagiographica</em> 20, 2.ª ed. (Bruxelas: Société des Bollandistes, 1966). <a href="https://www.worldcat.org/oclc/875726">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/875726)</span></div>
+
+<div class="e"><strong>Delehaye, Hippolyte</strong> (S.J.), <em>Mélanges d'hagiographie grecque et latine</em>, <em>Subsidia Hagiographica</em> 42 (Bruxelas: Société des Bollandistes, 1966). <a href="https://www.worldcat.org/oclc/1502064">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/1502064)</span></div>
+
+<div class="e"><strong>Delehaye, Hippolyte</strong> (S.J.), <em>Étude sur le légendier romain</em> (Bruxelas: Société des Bollandistes, 1936). <a href="https://www.worldcat.org/oclc/5310555">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/5310555)</span></div>
+
+<div class="e"><strong>Dinzelbacher, Peter &amp; Bauer, Dieter Rainer</strong> (eds.), <em>Heiligenverehrung in Geschichte und Gegenwart</em> (Ostfildern: Schwabenverlag, 1990). <a href="https://www.worldcat.org/oclc/24041578">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/24041578)</span></div>
+
+<div class="e"><strong>Dubois, Jacques &amp; Lemaître, Jean-Loup</strong>, <em>Sources et méthodes de l'hagiographie médiévale</em>, préf. Joseph Van der Straeten (Paris: Cerf, 1993). <a href="https://www.worldcat.org/oclc/29862022">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/29862022)</span></div>
+
+<div class="e"><strong>Duby, Georges; École Française de Rome &amp; Università degli Studi La Sapienza</strong> (eds.), <em>Les Fonctions des saints dans le monde occidental (IIIe–XIIIe siècle). Actes du Colloque, Rome, 27–29 octobre 1988</em> (Roma: École Française de Rome, 1991). <a href="https://www.worldcat.org/oclc/25060820">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/25060820)</span></div>
+
+<div class="e"><strong>Fleith, Barbara</strong>, <em>Studien zur Überlieferungsgeschichte der lateinischen Legenda Aurea</em>, <em>Subsidia Hagiographica</em> 72 (Bruxelas: Société des Bollandistes, 1991). <a href="https://www.worldcat.org/oclc/26223278">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/26223278)</span></div>
+
+<div class="e"><strong>Gehrke, Pamela Stucky</strong>, <em>Saints and Scribes: Medieval Hagiography in Its Manuscript Context</em> (Berkeley / Los Angeles / Londres: University of California Press, 1993). <a href="https://www.worldcat.org/oclc/25747879">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/25747879)</span></div>
+
+<div class="e"><strong>Goodich, M.</strong>, "A Note on Sainthood in the Hagiographical Prologue", <em>History and Theory</em> 20/2 (1981), 168–174.</div>
+
+<div class="e"><strong>Grégoire, Réginald</strong>, <em>Manuale di agiologia: Introduzione alla letteratura agiografica</em> (Fabriano: Monastero di S. Silvestro Abate, 1987). <a href="https://www.worldcat.org/oclc/17624040">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/17624040)</span></div>
+
+<div class="e"><strong>Hagiographie, Culture et Sociétés (IVe–XIIe siècles). Actes du Colloque (Nanterre et Paris, 2–5 mai 1979)</strong> (Paris: Études Augustiniennes, 1981). <a href="https://www.worldcat.org/oclc/8274540">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/8274540)</span></div>
+
+<div class="e"><strong>Heffernan, Thomas J.</strong>, <em>Sacred Biography: Saints and Their Biographers in the Middle Ages</em> (Nova Iorque / Oxford: Oxford University Press, 1992). <a href="https://www.worldcat.org/oclc/24752285">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/24752285)</span></div>
+
+<div class="e"><strong>Heinzelmann, Martin</strong>, "Neue Aspekte der biographischen und hagiographischen Literatur in der lateinischen Welt", <em>Francia</em> 1 (1973), 27–44.</div>
+
+<div class="e"><strong>Heinzelmann, Martin</strong>, <em>Translationsberichte und andere Quellen des Reliquienkultes</em>, <em>Typologie des sources du moyen âge occidental</em> 33 (Turnhout: Brepols, 1979). <a href="https://www.worldcat.org/oclc/6558697">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/6558697)</span></div>
+
+<div class="e"><strong>Heinzelmann, Martin</strong> (ed.), <em>Manuscrits hagiographiques et travail des hagiographes</em> (Sigmaringen: Thorbecke, 1992). <a href="https://www.worldcat.org/oclc/26873891">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/26873891)</span></div>
+
+<div class="e"><strong>Kerscher, Gottfried</strong> (ed.), <em>Hagiographie und Kunst. Der Heiligenkult in Schrift, Bild und Architektur</em> (Berlim: Reimer, 1993). <a href="https://www.worldcat.org/oclc/29781026">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/29781026)</span><br>
+<span class="note">Inclui estudos de Bernt, Kerscher, Jakobi-Mirwald e outros sobre a relação entre hagiografia e arte.</span></div>
+
+<div class="e"><strong>Kleinberg, Aviad M.</strong>, <em>Proving Sanctity: Selection and Authentication of Saints in the Later Middle Ages</em> (Berkely: University of California Press, 1989). <a href="https://www.worldcat.org/oclc/18968432">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/18968432)</span></div>
+
+<div class="e"><strong>Kötting, Bernhard</strong>, <em>Der frühchristliche Reliquienkult und die Bestattung im Kirchengebäude</em> (Colónia: Opladen, 1965). <a href="https://www.worldcat.org/oclc/3640186">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/3640186)</span></div>
+
+<div class="e"><strong>Lanzoni, Francesco</strong>, <em>Genesi, svolgimento e tramonto delle leggende storiche</em>, <em>Studi e Testi</em> 43 (Roma: Biblioteca Apostolica Vaticana, 1925). <a href="https://www.worldcat.org/oclc/5380847">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/5380847)</span></div>
+
+<div class="e"><strong>Lapidge, Michael</strong>, "Editing Hagiography", in <em>La critica del testo mediolatino. Atti del Convegno (Firenze 6–8 dicembre 1990)</em> (Spoleto: CISAM, 1994), pp. 239–258.</div>
+
+<div class="e"><strong>Lauwers, Michel</strong>, "La Mort et le corps des saints: la scène de la mort dans les <em>Vitae</em> du haut Moyen Âge", <em>Le Moyen Âge</em> 94/1 (1988), 21–50.</div>
+
+<div class="e"><strong>Leonardi, Claudio</strong>, "Intellectuals and Hagiography in the Fourteenth Century", in Piero Boitani &amp; Anna Torti (eds.), <em>Intellectuals and Writers in Fourteenth-Century Europe</em> (Tübingen / Cambridge, 1986).</div>
+
+<div class="e"><strong>Lifshitz, Felice</strong>, "Beyond Positivism and Genre: 'Hagiographical' Texts as Historical Narrative", <em>Viator</em> 25 (1994), 95–113.</div>
+
+<div class="e"><strong>Lotter, Friedrich</strong>, "Zur Interpretation hagiographischer Quellen. Das Beispiel der <em>Vita Severini</em> des Eugippius", <em>Mittellateinisches Jahrbuch</em> 19 (1984), 37–62.</div>
+
+<div class="e"><strong>Maggioni, Giovanni Paolo</strong>, "Diverse redazioni della <em>Legenda Aurea</em>: particolarità e problemi testuali", in <em>La critica del testo mediolatino. Atti del Convegno (Firenze 6–8 dicembre 1990)</em> (Spoleto: CISAM, 1994), pp. 365–380.</div>
+
+<div class="e"><strong>Nahmer, Dieter von der</strong>, <em>Die lateinische Heiligenvita. Eine Einführung in die lateinische Hagiographie</em>, <em>Das lateinische Mittelalter</em> (Darmstadt: Wissenschaftliche Buchgesellschaft, 1994). <a href="https://www.worldcat.org/oclc/30893499">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/30893499)</span></div>
+
+<div class="e"><strong>Philippart, Guy</strong>, <em>Les Légendiers latins et autres manuscrits hagiographiques</em>, <em>Typologie des sources du moyen âge occidental</em> 24–25 (Turnhout: Brepols, 1977). <a href="https://www.worldcat.org/oclc/3875695">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/3875695)</span></div>
+
+<div class="e"><strong>Philippart, Guy</strong>, "Le manuscrit hagiographique latin comme gisement documentaire", in Martin Heinzelmann (ed.), <em>Manuscrits hagiographiques et travail des hagiographes</em> (Sigmaringen: Thorbecke, 1992), pp. 17–48.</div>
+
+<div class="e"><strong>Philippart, Guy</strong>, "Martirologi e leggendari", in <em>Lo spazio letterario del Medioevo. 1. Il Medioevo latino</em> (Roma: Salerno, 1994), II, pp. 605–648.</div>
+
+<div class="e"><strong>Philippart, Guy</strong> (ed.), <em>Hagiographies. Histoire internationale de la littérature hagiographique latine et vernaculaire en Occident des origines à 1550</em>, <em>Corpus Christianorum</em>, 2 vols. (Turnhout: Brepols, 1994–96). <a href="https://www.worldcat.org/oclc/32702882">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/32702882)</span></div>
+
+<div class="e"><strong>Philippart, Guy</strong>, "L'hagiographie comme littérature: concept récent et nouveaux programmes?", <em>Revue des sciences humaines</em> 251 (1998), 11–39.</div>
+
+<div class="e"><strong>Schmitt, J. C.</strong>, "The Fabrication of Saints", <em>Annales: Économies, Sociétés, Civilisations</em> 39/2 (1984), 286–300.</div>
+
+<div class="e"><strong>Sticca, Sandro</strong> (ed.), <em>Saints: Studies in Hagiography</em>, <em>Medieval and Renaissance Texts and Studies</em> 141 (Binghamton, N.Y.: MRTS, 1996). <a href="https://www.worldcat.org/oclc/34023649">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/34023649)</span></div>
+
+<div class="e"><strong>Urbano, Carlota</strong>, "Tipologias literárias do martírio na hagiografia. As origens", <em>Theologica</em> 41 (2006), 331–358.</div>
+
+<div class="e"><strong>Van Uytfanghe, Marc</strong>, "L'hagiographie: un «genre» chrétien ou antique tardif?", <em>Analecta Bollandiana</em> 111/1–2 (1993), 135–188.</div>
+
+<div class="e"><strong>Vauchez, André</strong>, <em>La Spiritualité du Moyen Âge occidental (VIIe–XIIIe siècles)</em> (Paris: PUF, 1975); trad. portuguesa: <em>A Espiritualidade da Idade Média Ocidental (Sécs. VII–XIII)</em> (Lisboa: Estampa, 1995). <a href="https://www.worldcat.org/oclc/3070085">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/3070085)</span></div>
+
+<div class="e"><strong>Vauchez, André</strong>, "La sainteté en Occident aux derniers siècles du Moyen Âge d'après les procès de canonisation et les documents hagiographiques", <em>Bibliothèque des Écoles françaises d'Athènes et de Rome</em> 241 (Roma: École Française de Rome, 1981). <a href="https://www.worldcat.org/oclc/8064064">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/8064064)</span></div>
+
+<div class="e"><strong>Vauchez, André</strong>, <em>Les Laïcs au Moyen Âge. Pratiques et expériences religieuses</em> (Paris: Cerf, 1987). <a href="https://www.worldcat.org/oclc/17765100">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/17765100)</span></div>
+
+<div class="e"><strong>Vauchez, André</strong>, "Saints admirables et saints imitables: les fonctions de l'hagiographie ont-elles changé aux derniers siècles du Moyen Âge?", in <em>Les Fonctions des saints dans le monde occidental (IIIe–XIIIe siècle)</em> (Roma, 1991), pp. 161–172.</div>
+
+<!-- HAGIOGRAFIA PENINSULAR E PORTUGUESA -->
+<div class="sub2-t" style="font-style:normal;color:var(--blue);font-size:.88rem;margin:.8rem 0 .3rem .3rem;border:none;padding:0">▸ Hagiografia da Península Ibérica e Portugal</div>
+
+<div class="e"><strong>Díaz y Díaz, Manuel Cecilio</strong> (ed.), <em>La vida de San Fructuoso de Braga. Estudio y edición crítica</em> (Braga: Diário do Minho, 1974). <a href="https://www.worldcat.org/oclc/2261706">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/2261706)</span></div>
+
+<div class="e"><strong>Fábrega Grau, Ángel</strong> (ed.), <em>Pasionario hispánico (siglos VII–XI)</em>, 2 vols. (1: Estudo; 2: Texto) (Madrid: CSIC, 1953–55). <a href="https://www.worldcat.org/oclc/6042965">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/6042965)</span></div>
+
+<div class="e"><strong>Freire, José Geraldes</strong>, "Problemas literários da <em>Vita Sancti Theotonii</em>", in <em>Santa Cruz de Coimbra do século XI ao século XX. Estudos no IX Centenário do Nascimento de S. Teotónio 1082–1982</em> (Coimbra: Comissão Executiva do IX Centenário, 1984), pp. 85–117.</div>
+
+<div class="e"><strong>Freire, José Geraldes</strong>, "Problemas literários das <em>Vitae Sanctae Senorinae</em>", in <em>Colóquio «A Mulher na Sociedade Portuguesa. Visão Histórica e Perspectivas Actuais». Actas</em> (Coimbra: Universidade de Coimbra, 1986), pp. 35–38.</div>
+
+<div class="e"><strong>Freire, José Geraldes</strong>, "Aspectos literários da <em>Vita Sancti Geraldi</em>", in <em>IX Centenário da Dedicação da Sé de Braga. Congresso Internacional. Actas</em>, vol. 1 (Braga, 1990), pp. 575–579.</div>
+
+<div class="e"><strong>Freire, José Geraldes</strong>, "Problemas literários das <em>Vitae Sancti Rudesindi</em>, especialmente dos quatro livros de «Milagres»", in <em>Actas das II Jornadas Luso-Espanholas de História Medieval</em>, vol. 4 (Porto: Centro de História da Universidade do Porto, 1990).</div>
+
+<div class="e"><strong>Freire, José Geraldes</strong>, <em>Oração de Sapiência. O Latim Medieval em Portugal: Língua e Literatura</em>, sep. dos Discursos de Abertura Solene das Aulas na Universidade de Coimbra (18 de Outubro de 1995) (Coimbra: Serviço de Documentação e Publicações da Universidade de Coimbra, 1995).</div>
+
+<div class="e"><strong>García Rodríguez, Carmen</strong>, <em>El culto de los santos en la España romana y visigoda</em> (Madrid: CSIC, 1966). <a href="https://www.worldcat.org/oclc/3152619">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/3152619)</span></div>
+
+<div class="e"><strong>Guerreiro, Rosa</strong>, "Un archétype ou des archétypes du passionnaire hispanique? Prudence et le métier d'hagiographe", in <em>Tertullien, de, aux Mozarabes. Mélanges offerts à Jacques Fontaine</em>, vol. 1 (Paris: Institut d'Études Augustiniennes, 1992), pp. 15–27.</div>
+
+<div class="e"><strong>Lucas, Maria Clara de Almeida</strong>, <em>Hagiografia medieval portuguesa</em>, <em>Biblioteca breve</em> 89 (Lisboa: Instituto de Cultura e Língua Portuguesa / ICALP, 1984). <a href="https://www.worldcat.org/oclc/12700571">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/12700571)</span></div>
+
+<div class="e"><strong>Martins, Mário</strong>, <em>Peregrinações e Livros de Milagres na Nossa Idade Média</em>, 2.ª ed. (Lisboa: Brotéria, 1957). <a href="https://www.worldcat.org/oclc/3225714">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/3225714)</span></div>
+
+<div class="e"><strong>Nascimento, Aires A. do &amp; Gomes, Saul António</strong>, <em>Hagiografia de Santa Cruz de Coimbra: Vida de D. Telo, Vida de D. Teotónio, Vida de Martinho de Soure</em> (Lisboa: Colibri, 1998). <a href="https://www.worldcat.org/oclc/42578879">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/42578879)</span></div>
+
+<div class="e"><strong>Rebelo, António Manuel Ribeiro</strong>, "A estratégia política através da hagiografia", in Aurélio Pérez Jiménez, José Ribeiro Ferreira &amp; Maria do Céu Fialho (eds.), <em>O Retrato e a Biografia como Estratégia de Teorização Política. Actas</em> (Coimbra / Málaga, 2004), pp. 131–158.</div>
+
+<!-- COLECÇÕES DE VIDAS DE SANTOS -->
+<div class="sub2-t" style="font-style:normal;color:var(--blue);font-size:.88rem;margin:.8rem 0 .3rem .3rem;border:none;padding:0">▸ Colecções e Edições de Vidas de Santos</div>
+
+<div class="e"><strong>Bolland, Jean</strong> et al. (eds.), <em>Acta Sanctorum, quotquot toto orbe coluntur […]</em>, 67 vols. (Antuérpia / Bruxelas, 1643–1940). [ver supra: AASS]</div>
+
+<div class="e"><strong>Love, Rosalind C.</strong> (ed. e trad.), <em>Three Eleventh-Century Anglo-Latin Saints' Lives: Vita S. Birini, Vita et Miracula S. Kenelmi and Vita S. Rumwoldi</em>, <em>Oxford Medieval Texts</em> (Oxford: Clarendon Press, 1996). <a href="https://www.worldcat.org/oclc/33963671">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/33963671)</span></div>
+
+<div class="e"><strong>Thomas de Celano</strong> [et al.], <em>Legendae S. Francisci Assisiensis saeculis XIII et XIV conscriptae</em>, <em>Analecta Franciscana</em> 10 (Quaracchi / Florença: Typographia Collegii S. Bonaventurae, 1926–41). <a href="https://www.worldcat.org/oclc/5379551">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/5379551)</span></div>
+</div>
+
+<div class="sub2" id="s10-best"><div class="sub2-t">C.2. Bestiários, Herbários, Lapidários</div>
+
+<div class="e"><strong>McCulloch, Florence</strong>, <em>Mediaeval Latin and French Bestiaries</em>, <em>University of North Carolina Studies in the Romance Languages and Literatures</em> 33 (Chapel Hill, 1960; rev. ed. 1962). <a href="https://www.worldcat.org/oclc/481395">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/481395)</span></div>
+</div>
+
+<div class="sub2" id="s10-encic"><div class="sub2-t">C.3. Enciclopédias</div>
+
+<div class="e"><strong>Fontaine, Jacques</strong>, <em>Isidore de Séville et la culture classique dans l'Espagne wisigothique</em>, 2.ª ed., 3 vols. (Paris: Études Augustiniennes, 1983). <a href="https://www.worldcat.org/oclc/505363">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/505363)</span></div>
+
+<div class="e"><strong>Isidoro de Sevilha</strong>, <em>Etymologiarum sive Originum libri XX</em>, ed. W. M. Lindsay (Oxford, 1911). [ver secção V]</div>
+
+<div class="e"><strong>Ribémont, Bernard</strong>, <em>Les origines des encyclopédies médiévales: d'Isidore de Séville aux Carolingiens</em> (Paris: Champion, 2001). <a href="https://www.worldcat.org/oclc/47715847">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/47715847)</span></div>
+</div>
+
+<div class="sub2" id="s10-epist"><div class="sub2-t">C.4. Epistolografia e Artes dictandi</div>
+
+<div class="e"><strong>Camargo, Martin</strong>, <em>Ars dictaminis, ars dictandi</em>, <em>Typologie des sources</em> 60 (Turnhout: Brepols, 1991). <a href="https://www.worldcat.org/oclc/23544064">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/23544064)</span></div>
+
+<div class="e"><strong>Constable, Giles</strong>, <em>Letters and Letter-Collections</em>, <em>Typologie des sources</em> 17 (Turnhout: Brepols, 1976). <a href="https://www.worldcat.org/oclc/3029011">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/3029011)</span></div>
+
+<div class="e"><strong>Faral, Edmond</strong>, <em>Les Arts poétiques du XIIe et du XIIIe siècles</em> (Paris: Champion, 1924; reimp. 1982). <a href="https://www.worldcat.org/oclc/476748">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/476748)</span></div>
+
+<div class="e"><strong>Kelly, Douglas</strong>, <em>The Arts of Poetry and Prose</em>, <em>Typologie des sources</em> 59 (Turnhout: Brepols, 1991). <a href="https://www.worldcat.org/oclc/25013555">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/25013555)</span></div>
+
+<div class="e"><strong>Lanham, Carol D.</strong>, <em>Salutatio Formulas in Latin Letters to 1200</em> (Munique, 1975). <a href="https://www.worldcat.org/oclc/2093695">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/2093695)</span></div>
+
+<div class="e"><strong>Turcan-Verkerk, Anne-Marie</strong>, "Répertoire chronologique des théories de l'art d'écrire en prose (milieu du XIe s.–années 1230)", <em>Archivum Latinitatis Medii Aevi</em> 66 (2008), 29–197.</div>
+</div>
+
+<div class="sub2" id="s10-exempl"><div class="sub2-t">C.5. <em>Exempla</em> · Fabulística</div>
+
+<div class="e"><strong>Tubach, Frederic C.</strong>, <em>Index Exemplorum: A Handbook of Medieval Religious Tales</em> (Helsinki: Suomalainen Tiedeakatemia, 1969). <a href="https://www.worldcat.org/oclc/77697">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/77697)</span></div>
+
+<div class="e"><strong>Welter, Jean-Thiébaut</strong>, <em>L'Exemplum dans la littérature religieuse et didactique du Moyen Âge</em> (Paris / Toulouse: Guitard, 1927; repr. Genève, 1973). <a href="https://www.worldcat.org/oclc/4472003">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/4472003)</span></div>
+</div>
+
+<div class="sub2" id="s10-floril"><div class="sub2-t">C.6. Florilegia · Sentenças e Provérbios</div>
+
+<div class="e"><strong>Walther, Hans</strong>, <em>Proverbia sententiaeque Latinitatis Medii Aevi</em>, 9 vols. (Göttingen: Vandenhoeck &amp; Ruprecht, 1963–86). [ver secção VII.1]</div>
+</div>
+
+<div class="sub2" id="s10-itin"><div class="sub2-t">C.7. Itinerários e Viagens</div>
+
+<div class="e"><strong>Campbell, Mary B.</strong>, <em>The Witness and the Other World: Exotic European Travel Writing, 400–1600</em> (Ithaca: Cornell University Press, 1988). <a href="https://www.worldcat.org/oclc/16548578">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/16548578)</span></div>
+</div>
+
+<div class="sub2" id="s10-litur"><div class="sub2-t">C.8. Liturgia (Livros Litúrgicos e Formas Litúrgicas: <em>Antiphonae · Hymni · Sequentiae · Tropi · Officia</em>) · Poesia Religiosa</div>
+
+<div class="e"><strong>Analecta Hymnica Medii Aevi</strong>, ed. Guido Maria Dreves &amp; Clemens Blume, 55 vols. (Leipzig: Reisland, 1886–1922). <span class="badge sub-badge">Assinatura online</span><br>
+<a href="http://nrs.harvard.edu/urn-3:hul.eresource:analecta">Harvard e-Resources</a> <span class="url">(http://nrs.harvard.edu/urn-3:hul.eresource:analecta)</span><br>
+<span class="note">Mais de 16.000 textos; cobre a himnografia latina medieval entre os séculos V e XV.</span></div>
+
+<div class="e"><strong>Freire, José Geraldes</strong>, "Hinos Litúrgicos em Português e em Latim", <em>Humanitas</em> 35–36 (1983–84), 391–392.<br>
+<span class="note">Artigo do medievalista português sobre a tradição dos hinos litúrgicos em latim e vernáculo, com interesse directo para a himnografia medieval ibérica.</span></div>
+
+<div class="e"><strong>Hesbert, René-Jean</strong>, <em>Corpus Antiphonalium Officii</em>, 6 vols. (Roma: Herder, 1963–79). <a href="https://www.worldcat.org/oclc/464208">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/464208)</span></div>
+
+<div class="e"><strong>Mohrmann, Christine</strong>, <em>Liturgical Latin: Its Origins and Character</em> (Londres: Burns &amp; Oates, 1959). [ver secção IV.2]</div>
+
+<div class="e"><strong>Szövérffy, Joseph</strong>, <em>Die Annalen der lateinischen Hymnendichtung. Ein Handbuch</em>, 2 vols. (Berlim: Erich Schmidt, 1964–65). <a href="https://www.worldcat.org/oclc/803843">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/803843)</span></div>
+
+<div class="e"><strong>Walpole, A. S.</strong> (ed.), <em>Early Latin Hymns</em> (Cambridge: Cambridge University Press, 1922). <a href="https://www.worldcat.org/oclc/311483">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/311483)</span></div>
+</div>
+
+<div class="sub2"><div class="sub2-t">C.9. Orações e Livros de Oração · Liturgias Regionais (Ambrosiana · Hispânica · Insular · Galicana · Romana)</div>
+<div class="e"><span class="note">→ Ver subsecção C.8 (Liturgia) e secção IV.3 (Colecções de edições de autores cristãos).</span></div>
+</div>
+
+<div class="sub2" id="s10-pred"><div class="sub2-t">C.10. Predicação · Artes praedicandi · Homilética</div>
+
+<div class="e"><strong>Caplan, Harry</strong>, <em>Medieval Artes Praedicandi: A Hand-List</em> (Ithaca, 1934; Suppl. 1936). <a href="https://www.worldcat.org/oclc/1378764">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/1378764)</span></div>
+
+<div class="e"><strong>d'Avray, David L.</strong>, <em>The Preaching of the Friars: Sermons Diffused from Paris before 1300</em> (Oxford: Clarendon Press, 1985). <a href="https://www.worldcat.org/oclc/11545680">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/11545680)</span></div>
+
+<div class="e"><strong>Longère, Jean</strong>, <em>La Prédication médiévale</em> (Paris: Études Augustiniennes, 1983). <a href="https://www.worldcat.org/oclc/10601764">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/10601764)</span></div>
+
+<div class="e"><strong>Schneyer, Johannes Baptist</strong>, <em>Repertorium der lateinischen Sermones des Mittelalters, 1150–1350</em>, 11 vols. (Münster: Aschendorff, 1969–90). <a href="https://www.worldcat.org/oclc/2244049">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/2244049)</span></div>
+</div>
+
+<div class="sub2" id="s10-specul"><div class="sub2-t">C.11. Specula principum · Tratadística Política</div>
+
+<div class="e"><strong>Born, Lester Kruger</strong>, "The Specula Principis of the Carolingian Renaissance", <em>Revue belge de philologie et d'histoire</em> 12 (1933), 583–611.</div>
+
+<div class="e"><strong>Kempshall, M. S.</strong>, <em>The Common Good in Late Medieval Political Thought</em> (Oxford: Clarendon Press, 1999). <a href="https://www.worldcat.org/oclc/40044395">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/40044395)</span></div>
+</div>
+
+<div class="sub2" id="s10-stor"><div class="sub2-t">C.12. Historiografia (Crónicas · Anais · Gestas)</div>
+
+<div class="e"><strong>Guenée, Bernard</strong>, <em>Histoire et culture historique dans l'Occident médiéval</em> (Paris: Aubier Montaigne, 1980). <a href="https://www.worldcat.org/oclc/7188765">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/7188765)</span></div>
+
+<div class="e"><strong>MGH Scriptores</strong> — edições críticas dos principais cronistas e historiadores. <span class="badge oa">OA dMGH</span><br>
+<a href="https://www.dmgh.de/">dmgh.de</a> <span class="url">(https://www.dmgh.de/)</span></div>
+
+<div class="e"><strong>Partner, Nancy F.</strong>, <em>Serious Entertainments: The Writing of History in Twelfth-Century England</em> (Chicago: University of Chicago Press, 1977). <a href="https://www.worldcat.org/oclc/3004310">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/3004310)</span></div>
+
+<div class="e"><strong>Ray, Roger</strong>, "Medieval Historiography Through the Twelfth Century: Problems and Progress of Research", <em>Viator</em> 5 (1974), 33–59.</div>
+</div>
+
+<div class="sub2" id="s10-teatro"><div class="sub2-t">C.13. Teatro Litúrgico e Teatro Profano</div>
+
+<div class="e"><strong>Hardison, O. B.</strong>, <em>Christian Rite and Christian Drama in the Middle Ages: Essays in the Origin and Early History of Modern Drama</em> (Baltimore: Johns Hopkins Press, 1965). <a href="https://www.worldcat.org/oclc/313476">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/313476)</span></div>
+
+<div class="e"><strong>Young, Karl</strong>, <em>The Drama of the Medieval Church</em>, 2 vols. (Oxford: Clarendon Press, 1933; repr. 1967). <a href="https://www.worldcat.org/oclc/313413">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/313413)</span></div>
+</div>
+
+<div class="sub2"><div class="sub2-t">C.14. Exegese Bíblica · Literatura Apocalíptica</div>
+
+<div class="e"><strong>De Lubac, Henri</strong>, <em>Exégèse médiévale. Les quatre sens de l'Écriture</em>, 4 vols. (Paris: Aubier, 1959–64). <a href="https://www.worldcat.org/oclc/1091016">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/1091016)</span></div>
+
+<div class="e"><strong>Smalley, Beryl</strong>, <em>The Study of the Bible in the Middle Ages</em>, 3.ª ed. (Oxford: Blackwell, 1983). <a href="https://www.worldcat.org/oclc/9441023">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/9441023)</span></div>
+
+<div class="e"><strong>Stegmüller, Friedrich</strong>, <em>Repertorium Biblicum Medii Aevi</em>, 11 vols. (Madrid: CSIC, 1950–80). [ver secção VII.3]</div>
+</div>
+
+<div class="sub2"><div class="sub2-t">C.15. Dialogus e Literatura de Debate (Streitgedicht)</div>
+
+<div class="e"><strong>Walther, Hans</strong>, <em>Das Streitgedicht in der lateinischen Literatur des Mittelalters</em> (Munique: Beck, 1920; reimp. Hildesheim, 1984). <a href="https://www.worldcat.org/oclc/1261083">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/1261083)</span></div>
+</div>
+</div>
+
+<!-- D. INSTITUIÇÕES -->
+<div class="sub" id="s10-inst"><div class="sub-t">D. Instituições</div>
+
+<div class="sub2" id="s10-bibl"><div class="sub2-t">D.1. Bibliotecas · Catálogos de Manuscritos</div>
+<div class="e"><span class="note">→ Ver secção XI (Paleografia, Manuscritos e Tradição Textual).</span></div>
+</div>
+
+<div class="sub2"><div class="sub2-t">D.2. Concílios e Sínodos</div>
+<div class="e"><strong>Hefele, Charles Joseph &amp; Leclercq, Henri</strong>, <em>Histoire des Conciles d'après les documents originaux</em>, 11 vols. (Paris: Letouzey et Ané, 1907–52). <a href="https://www.worldcat.org/oclc/702200">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/702200)</span></div>
+</div>
+
+<div class="sub2" id="s10-dir"><div class="sub2-t">D.3. Direito · Diplomatística · Livros Penitenciais</div>
+
+<div class="e"><strong>Breslau, Harry</strong>, <em>Handbuch der Urkundenlehre für Deutschland und Italien</em>, 2 vols. (Leipzig / Berlim: De Gruyter, 1912–31). <a href="https://www.worldcat.org/oclc/2289530">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/2289530)</span></div>
+
+<div class="e"><strong>Kéry, Lotte</strong>, <em>Canonical Collections of the Early Middle Ages (ca. 400–1140)</em> (Washington: CUAP, 1999). <a href="https://www.worldcat.org/oclc/40747084">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/40747084)</span></div>
+
+<div class="e"><strong>Sharpe, Richard</strong>, "Charters, Deeds, and Diplomatics", in Mantello &amp; Rigg, <em>Medieval Latin</em> (1996), pp. 230–240. [ver secção I]</div>
+</div>
+
+<div class="sub2" id="s10-mon"><div class="sub2-t">D.4. Monaquismo e Ordens Religiosas · Regras e Consuetudines</div>
+
+<div class="e"><strong>Böckmann, Sr. Aquinata</strong>, "A Bibliography for Students of the Rule of Saint Benedict: Vocabula / Terms." <span class="badge oa">OA</span><br>
+<a href="http://archive.osb.org/rb/rbbib/b2vocab.html">archive.osb.org/rb/rbbib/b2vocab.html</a> <span class="url">(http://archive.osb.org/rb/rbbib/b2vocab.html)</span></div>
+
+<div class="e"><strong>Leclercq, Jean</strong>, <em>L'Amour des lettres et le désir de Dieu</em> (Paris: Cerf, 1957; 3.ª ed. 1990). <a href="https://www.worldcat.org/oclc/1059403">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/1059403)</span></div>
+
+<div class="e"><strong>Vogüé, Adalbert de</strong>, <em>Les Règles des saints Pères</em>, 2 vols., <em>SC</em> 297–298 (Paris: Cerf, 1982). <a href="https://www.worldcat.org/oclc/8849183">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/8849183)</span></div>
+</div>
+
+<div class="sub2" id="s10-escola"><div class="sub2-t">D.5. Escola e Universidade · Predicação</div>
+
+<div class="e"><strong>Cobban, Alan B.</strong>, <em>The Medieval Universities: Their Development and Organization</em> (Londres: Methuen, 1975). <a href="https://www.worldcat.org/oclc/1590178">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/1590178)</span></div>
+
+<div class="e"><strong>Paré, G.; Brunet, A. &amp; Tremblay, P.</strong>, <em>La Renaissance du XIIe siècle: Les Écoles et l'enseignement</em> (Paris: Vrin / Ottawa: Institut d'Études Médiévales, 1933). <a href="https://www.worldcat.org/oclc/1057561">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/1057561)</span></div>
+</div>
+</div>
+
+<!-- E. HISTÓRIA DA CULTURA E ESPIRITUALIDADE -->
+<div class="sub" id="s10-spir"><div class="sub-t">E. História da Cultura e da Espiritualidade</div>
+
+<div class="sub2" id="s10-asc"><div class="sub2-t">E.1. Ascética e Mística · Espiritualidade · Religiosidade Popular</div>
+
+<div class="e"><strong>Leclercq, Jean; Vandenbroucke, François &amp; Bouyer, Louis</strong>, <em>La Spiritualité du Moyen Âge</em> (Paris: Aubier, 1961). <a href="https://www.worldcat.org/oclc/3527905">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/3527905)</span></div>
+</div>
+
+<div class="sub2" id="s10-vis"><div class="sub2-t">E.2. Literatura Visionária e Profética · Artes moriendi</div>
+
+<div class="e"><strong>Dinzelbacher, Peter</strong>, <em>Vision und Visionsliteratur im Mittelalter</em> (Stuttgart: Hiersemann, 1981). <a href="https://www.worldcat.org/oclc/7963499">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/7963499)</span></div>
+</div>
+
+<div class="sub2"><div class="sub2-t">E.3. Heresias e Movimentos Heréticos · Missões · Peregrinações</div>
+<div class="e"><span class="note">→ Para textos de viagem e peregrinação, ver também C.7 (Itinerários).</span></div>
+</div>
+
+<div class="sub2" id="s10-rap"><div class="sub2-t">E.4. Relações com Culturas Não Latinas (Céltica · Germânica · Judaica · Islâmica · Românica)</div>
+
+<div class="e"><strong>Lapidge, Michael &amp; Sharpe, Richard</strong>, <em>A Bibliography of Celtic-Latin Literature 400–1200</em> (Dublin: Royal Irish Academy, 1985). [ver secção VII.2]</div>
+
+<div class="e"><span class="note">→ Para as relações com a cultura árabe e hebraica: ver Mantello &amp; Rigg, <em>Medieval Latin</em>, capítulo sobre Traduções (pp. 461–465).</span></div>
+</div>
+
+<div class="sub2"><div class="sub2-t">E.5. Escrita Feminina em Latim</div>
+
+<div class="e"><strong>Dronke, Peter</strong>, <em>Women Writers of the Middle Ages: A Critical Study of Texts from Perpetua (†203) to Marguerite Porete (†1310)</em> (Cambridge: Cambridge University Press, 1984). [ver secção VII.3]</div>
+
+<div class="e"><strong>Stevenson, Jane</strong>, <em>Women Latin Poets: Language, Gender, and Authority, from Antiquity to the Eighteenth Century</em> (Oxford: Oxford University Press, 2005). [ver secção VII.3]</div>
+</div>
+</div>
+
+<!-- F. CIÊNCIAS AUXILIARES -->
+<div class="sub" id="s10-aux"><div class="sub-t">F. Ciências Auxiliares da História</div>
+
+<div class="sub2" id="s10-cod"><div class="sub2-t">F.1. Codicologia e Paleografia</div>
+
+<div class="e"><strong>Bischoff, Bernhard</strong>, <em>Paläographie des römischen Altertums und des abendländischen Mittelalters</em>, 3.ª ed. (Berlim: Erich Schmidt, 1986); trad. inglesa (Cambridge, 1990). [ver secção XI]</div>
+
+<div class="e"><strong>Reynolds, Leighton D. &amp; Wilson, Nigel G.</strong>, <em>Scribes and Scholars</em>, 4.ª ed. (Oxford: Clarendon Press, 2013). [ver secção XI]</div>
+</div>
+
+<div class="sub2" id="s10-diplo"><div class="sub2-t">F.2. Diplomatística · Epigrafia · Numismática · Sigilografia · Genealogia · Heráldica</div>
+
+<div class="e"><strong>Breslau, Harry</strong>, <em>Handbuch der Urkundenlehre</em> [ver D.3].</div>
+</div>
+
+<div class="sub2" id="s10-icon"><div class="sub2-t">F.3. Iconografia · Prosopografia</div>
+
+<div class="e"><strong><em>Iconographica. Rivista di iconografia medievale e moderna</em></strong> (SISMEL). <span class="badge db">MIRABILE</span><br>
+<a href="https://www.mirabileweb.it/">mirabileweb.it — Iconographica</a> <span class="url">(https://www.mirabileweb.it/)</span></div>
+</div>
+</div>
+</section>
+
+<!-- ==================== XI — PALEOGRAFIA ==================== -->
+<section class="sec" id="s11">
+<div class="sec-hdr"><span class="sec-n">XI.</span><span class="sec-t">Paleografia, Manuscritos e Tradição Textual</span></div>
+
+<div class="e"><strong>Bischoff, Bernhard</strong>, <em>Paläographie des römischen Altertums und des abendländischen Mittelalters</em>, 3.ª ed. (<em>Grundlagen der Germanistik</em> 24; Berlim: Erich Schmidt, 1986); trad. inglesa: <em>Latin Palaeography: Antiquity and the Middle Ages</em>, trad. Dáibhí Ó Cróinín &amp; David Ganz (Cambridge, 1990). <a href="https://www.worldcat.org/oclc/20012765">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/20012765)</span></div>
+
+<div class="e"><strong>Bischoff, Bernhard</strong>, <em>Manuscripts and Libraries in the Age of Charlemagne</em>, trad. Michael Gorman (Cambridge: Cambridge University Press, 1994). <a href="https://www.worldcat.org/oclc/29557688">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/29557688)</span></div>
+
+<div class="e"><strong>Conteni, John J. &amp; Ganz, David</strong> (eds.), <em>Bischoffs Schriften zur lateinischen Überlieferung</em>.<br>
+<span class="note">Ver também a monumental <em>Katalog der festländischen Handschriften des neunten Jahrhunderts</em> de Bischoff, 3 vols. (Wiesbaden: Harrassowitz, 1998–2017).</span></div>
+
+<div class="e"><strong>Reynolds, Leighton D. &amp; Wilson, Nigel G.</strong>, <em>Scribes and Scholars: A Guide to the Transmission of Greek and Latin Literature</em>, 4.ª ed. (Oxford: Clarendon Press, 2013). <a href="https://www.worldcat.org/oclc/852608038">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/852608038)</span></div>
+
+<div class="e"><strong>Traube, Ludwig</strong> — ver secção I.</div>
+</section>
+
+<!-- ==================== XII — TRANSMISSÃO DOS CLÁSSICOS ==================== -->
+<section class="sec" id="s12">
+<div class="sec-hdr"><span class="sec-n">XII.</span><span class="sec-t">Transmissão dos Clássicos no Medievo</span></div>
+
+<div class="e"><strong>Curtius, Ernst Robert</strong>, <em>Europäische Literatur</em> — ver secção VIII.</div>
+
+<div class="e"><strong>Reynolds, Leighton D.</strong> (ed.), <em>Texts and Transmission: A Survey of the Latin Classics</em> (Oxford: Clarendon Press, 1983; repr. 1986). <a href="https://www.worldcat.org/oclc/9282944">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/9282944)</span><br>
+<span class="note">Panorama da tradição manuscrita dos autores latinos clássicos na Idade Média; obra de referência indispensável.</span></div>
+
+<div class="e"><strong>Wright, Charles D.</strong> (ed.), <em>The Classics in the Middle Ages: Transmission and Influence</em>. <span class="badge oa">ARC Bibliography</span><br>
+<a href="https://arcbibliography.org/the-classics-in-the-middle-ages-transmission-and-influence/">arcbibliography.org/the-classics-in-the-middle-ages-transmission-and-influence/</a> <span class="url">(https://arcbibliography.org/the-classics-in-the-middle-ages-transmission-and-influence/)</span></div>
+</section>
+
+<!-- ==================== XIII — PERIÓDICOS ==================== -->
+<section class="sec" id="s13">
+<div class="sec-hdr"><span class="sec-n">XIII.</span><span class="sec-t">Periódicos Especializados em Latim Medieval e Estudos Medievais</span></div>
+
+<div class="notebox">Para cada periódico indicam-se, quando disponíveis: <strong>cota no Instituto de Estudos Clássicos (IEC / FLUC)</strong> consultável no <em>Webopac SIB UC</em>, e o <strong>acesso electrónico</strong> disponível (☺ = acesso livre; VPN = acesso por VPN da UC). Os dados provêm da <em>Folha de Receção de Revistas da Biblioteca de Estudos Clássicos</em> (FLUC, 2026). Para as <strong>monografias</strong> das restantes secções, as cotas das bibliotecas da Universidade de Coimbra devem ser pesquisadas directamente no catálogo integrado do SIB UC: <a href="https://webopac.sib.uc.pt/search*por~S0">webopac.sib.uc.pt/search*por~S0</a> <span class="url">(https://webopac.sib.uc.pt/search*por~S0)</span> e em <a href="https://research.ebsco.com/c/cz3nai/search">EBSCOhost / UC</a> <span class="url">(https://research.ebsco.com/c/cz3nai/search)</span>.</div>
+
+<div class="sub"><div class="sub-t">XIII.1. Periódicos Principais de Latim Medieval</div>
+
+<div class="e"><strong><em>Archivum Latinitatis Medii Aevi (Bulletin Du Cange)</em></strong> (Paris: Union Académique Internationale, 1924–1977; n.s. 1978– ).<br>
+<strong>IEC:</strong> cota <code>Dep. 3-6</code> (vols. T. 19, nº 21/22 (1948) – T. 40 (1977)) &bull; <em>Webopac SIB UC</em> &bull; Acesso electrónico: N (sem acesso online disponível).<br>
+<a href="https://www.worldcat.org/oclc/884340808">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/884340808)</span></div>
+
+<div class="e"><strong><em>Filologia Mediolatina. Rivista della Società Internazionale per lo Studio del Medioevo Latino</em></strong> (Firenze: SISMEL, 1994– ). <span class="badge db">MIRABILE</span><br>
+<a href="https://www.mirabileweb.it/">mirabileweb.it — Filologia Mediolatina</a> <span class="url">(https://www.mirabileweb.it/)</span></div>
+
+<div class="e"><strong><em>Journal of Medieval Latin. A Publication of the North American Association of Medieval Latin</em></strong> (Turnhout: Brepols, 1991– ).<br>
+<strong>IEC:</strong> cota <code>Dep. 33-5</code> &bull; <em>Webopac SIB UC</em> &bull; Acesso electrónico: <a href="https://www.jstor.org/journal/jmedilatinpub">JSTOR</a> <span class="url">(https://www.jstor.org/journal/jmedilatinpub)</span> — <strong>VPN</strong> (embargo 5 anos); <a href="https://about.brepolis.net/">Brepols Online</a> — acesso livre ☺.<br>
+<a href="https://www.worldcat.org/oclc/23387218">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/23387218)</span></div>
+
+<div class="e"><strong><em>Medioevo Latino. Bollettino bibliografico della cultura europea da Boezio a Erasmo (secoli VI–XV)</em></strong> (Spoleto: CISAM / SISMEL, 1980– ).<br>
+<strong>IEC:</strong> cotas <code>S.G. 1-5-1/10</code> (vols. 16–25) e <code>S.G. 1-4-1/15</code> (vols. 1–15) &bull; <em>Webopac SIB UC</em> &bull; Acesso electrónico: via <a href="https://www.mirabileweb.it/">MIRABILE</a> (assinatura).<br>
+<a href="https://www.worldcat.org/oclc/8045004">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/8045004)</span></div>
+
+<div class="e"><strong><em>Mittellateinisches Jahrbuch. Internationale Zeitschrift für Mediävistik</em></strong> (Stuttgart / Bad Cannstatt: Frommann-Holzboog, 1964– ).<br>
+Acesso electrónico: via <a href="https://www.degruyter.com/journal/key/mlj/html">De Gruyter Online</a> (assinatura).<br>
+<a href="https://www.worldcat.org/oclc/1482261">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/1482261)</span></div>
+
+<div class="e"><strong><em>Revue du Moyen Âge Latin</em></strong> (Lyon / Strasbourg, 1945–1972). <span class="badge oa">OA (Persée)</span><br>
+<a href="https://www.worldcat.org/oclc/1765064">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/1765064)</span></div>
+
+<div class="e"><strong><em>Sacris Erudiri. A Journal on the Inheritance of Early and Medieval Christianity</em></strong> (Brepols / Corpus Christianorum, 1948– ). <span class="badge sub-badge">Brepols Online (assinatura)</span><br>
+<a href="https://www.corpuschristianorum.org/sacris-erudiri">corpuschristianorum.org/sacris-erudiri</a> <span class="url">(https://www.corpuschristianorum.org/sacris-erudiri)</span></div>
+</div>
+
+<div class="sub"><div class="sub-t">XIII.2. Periódicos Medievalísticos Gerais</div>
+
+<div class="e"><strong><em>Cahiers de civilisation médiévale</em></strong> (Poitiers: CESCM, 1958– ). <span class="badge oa">OA (Persée, vols. antigos)</span><br>
+<a href="https://www.persee.fr/collection/ccmed">persee.fr/collection/ccmed</a> <span class="url">(https://www.persee.fr/collection/ccmed)</span></div>
+
+<div class="e"><strong><em>Classica et Mediaevalia. Revue danoise de philologie et d'histoire</em></strong> (Copenhague: Museum Tusculanum, 1938– ).<br>
+<strong>IEC:</strong> cota <code>Dep. 6-3/4</code> &bull; <em>Webopac SIB UC</em> &bull; Acesso electrónico: <a href="https://tidsskrift.dk/classica">Royal Danish Library</a> <span class="url">(https://tidsskrift.dk/classica)</span> — acesso livre ☺.</div>
+
+<div class="e"><strong><em>Medievalia. Textos e Estudos</em></strong> (Porto, 1992– ).<br>
+<strong>IEC:</strong> cota <code>Dep. 14-6</code> &bull; <em>Webopac SIB UC</em> &bull; Acesso electrónico: <a href="https://medievalia.pt/">medievalia.pt</a> <span class="url">(https://medievalia.pt/)</span> — acesso livre ☺.</div>
+
+<div class="e"><strong><em>Medium Aevum</em></strong> (Society for the Study of Medieval Languages and Literature, Oxford, 1932– ).<br>
+Acesso electrónico: <a href="https://www.mhra.org/publications/medium-aevum">MHRA</a> (assinatura).</div>
+
+<div class="e"><strong><em>Nuntius Antiquus. Revista de Estudos Antigos e Medievais</em></strong> (Belo Horizonte: UFMG, 2008– ).<br>
+<strong>IEC:</strong> cota <code>Dep. 17-8</code> &bull; <em>Webopac SIB UC</em> &bull; Acesso electrónico: <a href="https://periodicos.ufmg.br/index.php/nuntius">Periódicos UFMG</a> <span class="url">(https://periodicos.ufmg.br/index.php/nuntius)</span> — acesso livre ☺.</div>
+
+<div class="e"><strong><em>Speculum: A Journal of Medieval Studies</em></strong> (Medieval Academy of America, 1926– ). <span class="badge oa">OA após 5 anos</span><br>
+<a href="https://www.journals.uchicago.edu/loi/spc">journals.uchicago.edu/loi/spc</a> <span class="url">(https://www.journals.uchicago.edu/loi/spc)</span></div>
+
+<div class="e"><strong><em>Spicae. Cahiers de l'Atelier Vincent de Beauvais</em></strong> (Paris: CNRS, 1978– ).<br>
+<strong>IEC:</strong> cota <code>Dep. 33-5</code> &bull; <em>Webopac SIB UC</em> &bull; Acesso electrónico: <a href="https://spicae.revues.org/">Spicae/OpenEdition</a> <span class="url">(https://spicae.revues.org/)</span> — acesso livre ☺.</div>
+
+<div class="e"><strong><em>Studi Medievali</em></strong> (Spoleto: CISAM, 1904– ).<br>
+Acesso electrónico: <a href="https://www.sismel.it/publications/studi-medievali">CISAM Online</a> (assinatura). <a href="https://www.worldcat.org/oclc/1762977">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/1762977)</span></div>
+
+<div class="e"><strong><em>Traditio: Studies in Ancient and Medieval History, Thought and Religion</em></strong> (Nova Iorque / Cambridge: Cambridge University Press, 1943– ).<br>
+Acesso electrónico: <a href="https://www.cambridge.org/core/journals/traditio">Cambridge Core</a> (assinatura). <a href="https://www.worldcat.org/oclc/1758023">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/1758023)</span></div>
+
+<div class="e"><strong><em>Viator: Medieval and Renaissance Studies</em></strong> (UCLA / Brepols, 1970– ).<br>
+Acesso electrónico: <a href="https://about.brepolis.net/viator/">Brepols Online</a> (assinatura). <a href="https://www.worldcat.org/oclc/1533742">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/1533742)</span></div>
+</div>
+
+<div class="sub"><div class="sub-t">XIII.3. Periódicos de Hagiografia e Espiritualidade</div>
+
+<div class="e"><strong><em>Cuadernos Monásticos</em></strong> (Abadía de Santa Escolástica, Victoria, Argentina, 1966– ).<br>
+<strong>IEC:</strong> cota <code>Dep. 33-5</code> &bull; <em>Webopac SIB UC</em> &bull; Acesso electrónico: <a href="https://surco.pbworks.com/">SURCO</a> — acesso livre ☺.</div>
+
+<div class="e"><strong><em>Hagiographica. Rivista di agiografia e biografia della Società Internazionale per lo Studio del Medioevo Latino</em></strong> (Firenze: SISMEL, 1994– ). <span class="badge db">MIRABILE</span><br>
+<a href="https://www.mirabileweb.it/">mirabileweb.it — Hagiographica</a> <span class="url">(https://www.mirabileweb.it/)</span></div>
+
+<div class="e"><strong><em>Itinerarium. Revista de Literatura e Cultura</em></strong> (Braga: Ed. Franciscana, 1955– ).<br>
+<strong>IEC:</strong> cota <code>C-104-3/6</code> &bull; <em>Webopac SIB UC</em> &bull; Acesso electrónico: N.</div>
+
+<div class="e"><strong><em>Studia Monastica. Commentarium ad rem monasticam investigandam</em></strong> (Abadia de Montserrat, 1959– ).<br>
+<strong>IEC:</strong> cota <code>Dep. 24-7</code> e <code>Dep. 25-1</code> &bull; <em>Webopac SIB UC</em> &bull; Acesso electrónico: <a href="https://dialnet.unirioja.es/revista/1162/A/">Dialnet</a> <span class="url">(https://dialnet.unirioja.es/revista/1162/A/)</span> — acesso livre ☺.</div>
+</div>
+
+<div class="sub"><div class="sub-t">XIII.4. Periódicos de Latim Neo-latino e Humanismo</div>
+
+<div class="e"><strong><em>Humanistica Lovaniensia. Journal of Neo-Latin Studies</em></strong> (Leuven: KU Leuven, 1950– ).<br>
+<strong>IEC:</strong> cota <code>Dep. 14-6/7</code> &bull; <em>Webopac SIB UC</em> &bull; Acesso electrónico: <a href="https://www.jstor.org/journal/humanlovaniens">JSTOR</a> <span class="url">(https://www.jstor.org/journal/humanlovaniens)</span> — <strong>VPN</strong> (sem embargo).</div>
+</div>
+
+<div class="sub"><div class="sub-t">XIII.5. Periódicos de Estudos Latinos Gerais (com interesse para o Latim Medieval)</div>
+
+<div class="e"><strong><em>Antike und Abendland. Beiträge zum Verständnis der Griechen und Römer und ihres Nachlebens</em></strong> (Berlim: De Gruyter, 1945– ).<br>
+<strong>IEC:</strong> cota <code>Dep. 2-6/7</code> &bull; <em>Webopac SIB UC</em> &bull; Acesso electrónico: <a href="https://www.degruyter.com/journal/key/ANTAB/html">De Gruyter Online</a> — <strong>VPN</strong>.</div>
+
+<div class="e"><strong><em>Latomus. Revue d'études latines</em></strong> (Bruxelas: Société d'Études Latines, 1937– ).<br>
+<strong>IEC:</strong> cota <code>Dep. 15-4/8</code> &bull; <em>Webopac SIB UC</em> &bull; Acesso electrónico: <a href="https://www.jstor.org/journal/latomus">JSTOR</a> <span class="url">(https://www.jstor.org/journal/latomus)</span> — <strong>VPN</strong> (embargo 5 anos).</div>
+
+<div class="e"><strong><em>Orpheus. Rivista di Umanità Classica e Cristiana</em></strong> (Catania: Università di Catania, 1954– ).<br>
+<strong>IEC:</strong> cota <code>Dep. 18-1/2</code> &bull; <em>Webopac SIB UC</em> &bull; Acesso electrónico: N.</div>
+
+<div class="e"><strong><em>Rivista di Cultura Classica e Medioevale</em></strong> (Roma: Istituto Editoriale e Poligrafico Internazionale, 1959– ).<br>
+<strong>IEC:</strong> cota <code>Dep. 23-4</code> &bull; <em>Webopac SIB UC</em> &bull; Acesso electrónico: <a href="https://www.jstor.org/journal/rividicultclasmedi">JSTOR</a> <span class="url">(https://www.jstor.org/journal/rividicultclasmedi)</span> — <strong>VPN</strong> (embargo 5 anos).</div>
+</div>
+</section>
+
+<!-- ==================== XIV — COLECÇÕES ==================== -->
+<section class="sec" id="s14">
+<div class="sec-hdr"><span class="sec-n">XIV.</span><span class="sec-t">Colecções e Séries Editoriais Fundamentais</span></div>
+
+<div class="e"><strong>Bibliothèque de l'École des Chartes</strong> (Paris, 1839– ). <span class="badge oa">OA parcial (Persée)</span><br>
+<a href="https://www.persee.fr/collection/bec">persee.fr/collection/bec</a> <span class="url">(https://www.persee.fr/collection/bec)</span></div>
+
+<div class="e"><strong>CCCM — Corpus Christianorum, Continuatio Mediaevalis</strong> — ver secção IV.3.</div>
+
+<div class="e"><strong>CCSL — Corpus Christianorum, Series Latina</strong> — ver secção IV.3.</div>
+
+<div class="e"><strong>Classiques de l'histoire de France au moyen âge (CHFMA)</strong> (Paris: Les Belles Lettres, 1923– ).</div>
+
+<div class="e"><strong>Edizione Nazionale dei Testi Mediolatini d'Italia (ENTMI)</strong> (Firenze: SISMEL, 2000– ). <a href="https://www.sismel.it/">sismel.it</a> <span class="url">(https://www.sismel.it/)</span></div>
+
+<div class="e"><strong>Les Classiques français du moyen âge (CFMA)</strong> (Paris: Champion, 1910– ).</div>
+
+<div class="e"><strong>MGH — Monumenta Germaniae Historica</strong> (Berlim / Hannover, 1826– ). <span class="badge oa">dMGH — OA</span><br>
+<a href="https://www.dmgh.de/">dmgh.de</a> <span class="url">(https://www.dmgh.de/)</span><br>
+<span class="note">Séries: <em>Scriptores</em> (SS), <em>Leges</em> (LL), <em>Diplomata</em> (DD), <em>Epistolae</em> (Epp.), <em>Antiquitates</em> (AA), <em>Scriptores rerum Germanicarum</em> (SSrG), <em>Scriptores rerum Merovingicarum</em> (SSRM), etc.</span></div>
+
+<div class="e"><strong>Rolls Series (Rerum Britannicarum Medii Aevi Scriptores)</strong>, 253 vols. (Londres, 1858–96; repr. Kraus). <a href="https://www.worldcat.org/oclc/1002073">WorldCat</a> <span class="url">(https://www.worldcat.org/oclc/1002073)</span></div>
+
+<div class="e"><strong>Sources Chrétiennes (SC)</strong> — ver secção IV.3.</div>
+
+<div class="e"><strong>Toronto Medieval Latin Texts (TMLT)</strong> (Toronto: Pontifical Institute of Mediaeval Studies, 1972– ).<br>
+<span class="note">Edições para uso escolar baseadas em manuscritos únicos, com notas breves.</span></div>
+
+<div class="e"><strong>Typologie des sources du Moyen Âge occidental</strong> (Turnhout: Brepols, 1972– ).<br>
+<span class="note">Série de fascículos temáticos; inclui volumes fundamentais sobre géneros e formas literárias medievais.</span></div>
+</section>
+
+<!-- ==================== XV — CENTROS ==================== -->
+<section class="sec" id="s15">
+<div class="sec-hdr"><span class="sec-n">XV.</span><span class="sec-t">Centros, Sociedades e Institutos de Referência</span></div>
+
+<div class="e"><strong>CISAM — Centro Italiano di Studi sull'Alto Medioevo</strong> (Spoleto). <span class="badge oa">OA</span><br>
+<a href="http://www.cisam.org/">cisam.org</a> <span class="url">(http://www.cisam.org/)</span></div>
+
+<div class="e"><strong>Corpus Christianorum (Brepols Publishers)</strong> (Turnhout). <span class="badge oa">OA parcial</span><br>
+<a href="https://www.corpuschristianorum.org/">corpuschristianorum.org</a> <span class="url">(https://www.corpuschristianorum.org/)</span></div>
+
+<div class="e"><strong>IRHT — Institut de Recherche et d'Histoire des Textes</strong> (Paris: CNRS). <span class="badge oa">OA</span><br>
+<a href="https://www.irht.cnrs.fr/">irht.cnrs.fr</a> <span class="url">(https://www.irht.cnrs.fr/)</span><br>
+<span class="note">Inclui a base de dados BVMM (manuscritos iluminados) e outros instrumentos de paleografia digital.</span></div>
+
+<div class="e"><strong>Société des Bollandistes</strong> (Bruxelas). <span class="badge oa">OA</span><br>
+<a href="https://www.bollandistes.org/">bollandistes.org</a> <span class="url">(https://www.bollandistes.org/)</span><br>
+<span class="note">Responsável pelos <em>Acta Sanctorum</em> e pela <em>Bibliotheca Hagiographica Latina</em>.</span></div>
+
+<div class="e"><strong>SISMEL — Società Internazionale per lo Studio del Medioevo Latino</strong> (Firenze). <span class="badge oa">OA (MIRABILE)</span><br>
+<a href="http://www.sismel.it/">sismel.it</a> <span class="url">(http://www.sismel.it/)</span><br>
+<span class="note">Publica CALMA, BISLAM, <em>Filologia Mediolatina</em>, <em>Hagiographica</em>, <em>Micrologus</em>, <em>Itineraria</em> e as <em>Edizioni del Galluzzo</em>.</span></div>
+
+<div class="e"><strong>Medieval Academy of America (MAA)</strong>. <span class="badge oa">OA (MDR)</span><br>
+<a href="http://www.medievalacademy.org/">medievalacademy.org</a> <span class="url">(http://www.medievalacademy.org/)</span><br>
+<span class="note">Publica <em>Speculum</em> e mantém o Medieval Digital Resources (MDR).</span></div>
+</section>
+
+</main>
+</div>
+
+<footer>
+  <p>Compilado por António Manuel Ribeiro Rebelo &bull; Faculdade de Letras da Universidade de Coimbra &bull; Última actualização: 24 de Abril de 2026</p>
+  <p style="margin-top:.35rem">Fontes principais consultadas: <a href="https://arcbibliography.org/medieval-latin-literature/">ARC Bibliography (Wright)</a> &bull; <a href="https://clavis.brepols.net/clacla">Clavis Clavium</a> &bull; <a href="https://www.mirabileweb.it/">MIRABILE/SISMEL</a> &bull; <a href="https://www.corpuschristianorum.org/">Corpus Christianorum</a> &bull; <a href="https://the-orb.arlima.net/wemsk/medlatlitwemsk.html">The ORB/WEMSK</a> &bull; <a href="https://www.persee.fr/">Persée</a></p>
+</footer>
+</body>
+</html>
